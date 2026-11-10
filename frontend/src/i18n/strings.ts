@@ -112,6 +112,9 @@ export const STRINGS = {
 
     'result.decision': 'Decision',
     'result.confidence': 'Confidence',
+    'result.confidence.low': 'Low',
+    'result.confidence.medium': 'Medium',
+    'result.confidence.high': 'High',
     'result.answer': 'Answer',
     'result.response': 'Response',
     'result.scope.record': 'Matched to a single pest record',
@@ -342,7 +345,7 @@ export const STRINGS = {
     'home.composerHint': 'फसल और समस्या अपने शब्दों में लिखें।',
     'home.helpTitle': 'आपको क्या मिलेगा',
     'home.help1': 'हर उत्तर के पीछे का स्रोत',
-    'home.help2': 'PHI, REI और सुरक्षा उपकरण की स्थिति',
+    'home.help2': 'PHI, REI और व्यक्तिगत सुरक्षा उपकरण की स्थिति',
     'home.help3': 'जानकारी न होने पर स्पष्ट मना',
     'home.help4': 'ज़रूरत पड़ने पर विशेषज्ञ के पास भेजना',
 
@@ -416,6 +419,9 @@ export const STRINGS = {
 
     'result.decision': 'निर्णय',
     'result.confidence': 'विश्वास',
+    'result.confidence.low': 'कम',
+    'result.confidence.medium': 'मध्यम',
+    'result.confidence.high': 'उच्च',
     'result.answer': 'उत्तर',
     'result.response': 'प्रतिक्रिया',
     'result.scope.record': 'एक कीट रिकॉर्ड से मिलान',
@@ -494,9 +500,9 @@ export const STRINGS = {
       'इस प्रश्न के लिए कोई रिकॉर्ड नहीं है, इसलिए अनुमान के बजाय किसी व्यक्ति के पास भेजा गया।',
     'decision.CLARIFICATION_REQUIRED.desc': 'प्रश्न इतना स्पष्ट नहीं था कि उसे खोजा जा सके।',
 
-    'field.phi': 'कटाई से पहले की अवधि (PHI)',
-    'field.rei': 'पुनः-प्रवेश अवधि (REI)',
-    'field.ppe': 'सुरक्षा उपकरण (PPE)',
+    'field.phi': 'कटाई-पूर्व प्रतीक्षा अवधि (PHI)',
+    'field.rei': 'खेत में दोबारा प्रवेश की प्रतीक्षा अवधि (REI)',
+    'field.ppe': 'व्यक्तिगत सुरक्षा उपकरण (PPE)',
     'field.dosage': 'मात्रा',
     'field.regulatory_approval': 'नियामक अनुमोदन',
     'field.source_verification': 'स्रोत सत्यापन',
@@ -532,13 +538,13 @@ export const STRINGS = {
     'safety.subtitle':
       'कोई भी उत्तर लिखे जाने से पहले पाँच निश्चित नियम चलते हैं। इन्हें प्रश्न, विश्वास-स्तर या भाषा के चयन से बदला नहीं जा सकता।',
     'safety.termsTitle': 'सुरक्षित उपयोग तय करने वाली पाँच बातें',
-    'safety.phi.title': 'कटाई से पहले की अवधि (PHI)',
+    'safety.phi.title': 'कटाई-पूर्व प्रतीक्षा अवधि (PHI)',
     'safety.phi.body':
       'छिड़काव और कटाई के बीच की प्रतीक्षा अवधि। इस अवधि के बाद ही फसल खाने योग्य मानी जाती है।',
-    'safety.rei.title': 'पुनः-प्रवेश अवधि (REI)',
+    'safety.rei.title': 'खेत में दोबारा प्रवेश की प्रतीक्षा अवधि (REI)',
     'safety.rei.body':
       'छिड़काव के बाद खेत में लौटने से पहले की प्रतीक्षा अवधि, आमतौर पर बिना सुरक्षा उपकरण के।',
-    'safety.ppe.title': 'सुरक्षा उपकरण (PPE)',
+    'safety.ppe.title': 'व्यक्तिगत सुरक्षा उपकरण (PPE)',
     'safety.ppe.body':
       'छिड़काव करने वाले को क्या पहनना चाहिए: दस्ताने, मास्क, पूरी आस्तीन, जूते — जैसा लेबल कहता है।',
     'safety.label.title': 'उत्पाद का लेबल',
@@ -580,10 +586,10 @@ export const STRINGS = {
     'about.processTitle': 'उत्तर कैसे बनता है',
     'about.showTitle': 'हर उत्तर में क्या दिखता है',
     'about.showBody':
-      'स्रोत का नाम, PHI, REI और सुरक्षा उपकरण की स्थिति, और अगला स्पष्ट कदम — यह भी कि सहायक उत्तर क्यों नहीं दे सका।',
+      'स्रोत का नाम, PHI, REI और व्यक्तिगत सुरक्षा उपकरण की स्थिति, और अगला स्पष्ट कदम — यह भी कि सहायक उत्तर क्यों नहीं दे सका।',
     'about.limitsTitle': 'इस पायलट की सीमाएँ',
     'about.limit1':
-      'पायलट के किसी रिकॉर्ड में एक साथ PHI, REI और सुरक्षा उपकरण प्रकाशित नहीं हैं, इसलिए हर रासायनिक उत्तर शैक्षिक रहता है, क्रियान्वयन योग्य नहीं।',
+      'पायलट के किसी रिकॉर्ड में एक साथ PHI, REI और व्यक्तिगत सुरक्षा उपकरण प्रकाशित नहीं हैं, इसलिए हर रासायनिक उत्तर शैक्षिक रहता है, क्रियान्वयन योग्य नहीं।',
     'about.limit2':
       'किसी उत्पाद की CIB&RC कीटनाशक पंजीकरण सूची से जाँच नहीं हुई है, और सहायक उसे कभी नहीं पूछता।',
     'about.limit3':

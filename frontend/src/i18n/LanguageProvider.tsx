@@ -6,13 +6,24 @@ import type { Lang, StringKey } from './strings'
 
 type LanguageChoice = Lang | 'auto'
 
+type Translate = (key: StringKey) => string
+
 interface LanguageContextValue {
   /** Language the interface is rendered in. */
   lang: Lang
   /** What the user picked: an explicit language, or "follow my question". */
   choice: LanguageChoice
   setChoice: (choice: LanguageChoice) => void
-  t: (key: StringKey) => string
+  t: Translate
+  /**
+   * The same translator bound to another language.
+   *
+   * Used by the result view, which must follow `response.answer_language` rather
+   * than the interface chrome: with the swipe set to "follow my question", a
+   * Hindi answer is rendered under English headings otherwise, so a farmer reads
+   * a Hindi refusal framed by English labels. One string table, two callers.
+   */
+  tFor: (lang: Lang) => Translate
 }
 
 const STORAGE_KEY = 'pesticide-advisory-language'
@@ -58,11 +69,14 @@ export function LanguageProvider({ children }: PropsWithChildren) {
   }, [lang])
 
   const value = useMemo<LanguageContextValue>(() => {
+    const tFor = (target: Lang): Translate => (key) =>
+      STRINGS[target][key] ?? STRINGS.en[key] ?? key
     return {
       lang,
       choice,
       setChoice,
-      t: (key) => STRINGS[lang][key] ?? STRINGS.en[key] ?? key,
+      t: tFor(lang),
+      tFor,
     }
   }, [lang, choice, setChoice])
 

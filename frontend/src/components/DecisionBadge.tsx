@@ -1,6 +1,7 @@
 import { Icon } from './Icon'
 import type { IconName } from './Icon'
 import { useLanguage } from '../i18n/LanguageProvider'
+import type { Lang } from '../i18n/strings'
 import type { AdvisoryDecision } from '../types/api'
 
 /**
@@ -64,18 +65,25 @@ interface DecisionBadgeProps {
   decision: AdvisoryDecision | null
   outcome: string
   scope?: 'record' | 'crop'
+  /**
+   * Language to phrase the badge in. Defaults to the interface language; the
+   * result view passes the language the backend answered in, because the class
+   * and its explanation are part of the answer, not part of the chrome.
+   */
+  lang?: Lang
 }
 
-export function DecisionBadge({ decision, outcome, scope }: DecisionBadgeProps) {
-  const { t } = useLanguage()
+export function DecisionBadge({ decision, outcome, scope, lang }: DecisionBadgeProps) {
+  const { t, tFor } = useLanguage()
+  const tr = lang ? tFor(lang) : t
   // A class this build does not know is treated exactly like no class at all:
   // it keeps the backend's value in `data-decision`, but it must not borrow
   // another class's wording. Without this check `t()` returns the raw key
   // ("decision.SOMETHING_NEW") and the badge would print an i18n key at a user.
   const known = decision !== null && decision in STYLES
   const style = known ? STYLES[decision] : null
-  const title = known ? t(`decision.${decision}`) : t('decision.unknown')
-  const description = known ? t(`decision.${decision}.desc`) : ''
+  const title = known ? tr(`decision.${decision}`) : tr('decision.unknown')
+  const description = known ? tr(`decision.${decision}.desc`) : ''
 
   return (
     <div

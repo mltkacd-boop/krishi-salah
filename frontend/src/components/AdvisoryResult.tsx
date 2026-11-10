@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 import { useLanguage } from '../i18n/LanguageProvider'
-import type { StringKey } from '../i18n/strings'
+import type { Lang, StringKey } from '../i18n/strings'
 import type {
   AdvisoryCitation,
   AdvisoryResponse,
@@ -40,8 +40,9 @@ function disclosureKey(item: SafetyDisclosure): string {
 }
 
 /** PHI / REI / PPE, one row each, with the source's own status. */
-function SafetyPanel({ disclosures }: { disclosures: SafetyDisclosure[] }) {
-  const { t, lang } = useLanguage()
+function SafetyPanel({ disclosures, lang }: { disclosures: SafetyDisclosure[]; lang: Lang }) {
+  const { tFor } = useLanguage()
+  const t = tFor(lang)
   const unique = disclosures.filter(
     (item, index, all) => all.findIndex((other) => disclosureKey(other) === disclosureKey(item)) === index,
   )
@@ -99,8 +100,9 @@ function SafetyPanel({ disclosures }: { disclosures: SafetyDisclosure[] }) {
 }
 
 /** A rule's message in plain words. Rule ids live in the technical section. */
-function RuleFindings({ findings }: { findings: RuleFinding[] }) {
-  const { t, lang } = useLanguage()
+function RuleFindings({ findings, lang }: { findings: RuleFinding[]; lang: Lang }) {
+  const { tFor } = useLanguage()
+  const t = tFor(lang)
   if (findings.length === 0) {
     return (
       <p className="text-sm text-ink-500">
@@ -135,8 +137,9 @@ function RuleFindings({ findings }: { findings: RuleFinding[] }) {
 }
 
 /** A source a farmer can open: name, authority, link, date. No hashes. */
-function CitationCard({ citation }: { citation: AdvisoryCitation }) {
-  const { t } = useLanguage()
+function CitationCard({ citation, lang }: { citation: AdvisoryCitation; lang: Lang }) {
+  const { tFor } = useLanguage()
+  const t = tFor(lang)
   return (
     <li className="border-b border-ivory-200 py-3 first:pt-0 last:border-0 last:pb-0">
       <div className="flex flex-wrap items-start justify-between gap-2">
@@ -363,7 +366,15 @@ function nextStepKeys(outcome: string, answered: boolean, actionable: boolean): 
 }
 
 export function AdvisoryResult({ response }: { response: AdvisoryResponse }) {
-  const { t } = useLanguage()
+  const { tFor } = useLanguage()
+  // A Hindi answer is read in Hindi. Headings, labels, warnings and next steps
+  // follow the language the backend answered in — not the interface chrome —
+  // because with the switch on "follow my question" those two differ, and a
+  // Hindi refusal framed by English labels is the bug this localises away.
+  // Technical details stay on the interface language: they are evaluation
+  // output, not farmer-facing content.
+  const answerLang: Lang = response.answer_language === 'hi' ? 'hi' : 'en'
+  const t = tFor(answerLang)
   const answered = response.outcome === 'answered'
   const missing = response.missing_information ?? []
 
@@ -381,6 +392,7 @@ export function AdvisoryResult({ response }: { response: AdvisoryResponse }) {
         decision={response.decision}
         outcome={response.outcome}
         scope={response.answer_scope}
+        lang={answerLang}
       />
 
       {/* A. Answer summary */}
@@ -394,7 +406,7 @@ export function AdvisoryResult({ response }: { response: AdvisoryResponse }) {
               </p>
             </div>
             <div className="w-full max-w-[15rem] sm:w-56">
-              <ConfidenceMeter label={response.confidence_label} />
+              <ConfidenceMeter label={response.confidence_label} lang={answerLang} />
             </div>
           </div>
         </div>
@@ -498,7 +510,7 @@ export function AdvisoryResult({ response }: { response: AdvisoryResponse }) {
             ) : (
               <ul className="divide-y divide-ivory-200">
                 {response.citations.map((citation) => (
-                  <CitationCard key={citation.source_id} citation={citation} />
+                  <CitationCard key={citation.source_id} citation={citation} lang={answerLang} />
                 ))}
               </ul>
             )}
@@ -527,7 +539,7 @@ export function AdvisoryResult({ response }: { response: AdvisoryResponse }) {
               </span>
             }
           >
-            <SafetyPanel disclosures={response.safety_disclosures} />
+            <SafetyPanel disclosures={response.safety_disclosures} lang={answerLang} />
             <p className="mt-4 border-t border-ivory-200 pt-3 text-2xs leading-5 text-ink-500">
               {t('result.policy')}
             </p>
@@ -559,7 +571,7 @@ export function AdvisoryResult({ response }: { response: AdvisoryResponse }) {
           icon={<Icon name="shield" className="h-4 w-4 text-ink-400" />}
         >
           {response.rule_findings.length > 0 ? (
-            <RuleFindings findings={response.rule_findings} />
+            <RuleFindings findings={response.rule_findings} lang={answerLang} />
           ) : (
             <p className="text-sm leading-6 text-ink-800">{t('result.gateWhy')}</p>
           )}
