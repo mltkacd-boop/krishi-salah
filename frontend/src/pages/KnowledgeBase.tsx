@@ -189,7 +189,7 @@ export function KnowledgeBase() {
     <div>
       <PageHeader eyebrow={t('nav.knowledge')} title={t('kb.title')} description={t('kb.subtitle')} />
 
-      <div className="mb-6 flex items-start gap-3 rounded-card border border-gold-300 bg-gold-50 px-4 py-3.5 sm:px-5">
+      <div className="mb-6 flex items-start gap-3 rounded-panel border border-gold-300 bg-gold-50 px-4 py-4 shadow-card sm:px-5">
         <Icon name="info" className="mt-0.5 h-4 w-4 flex-shrink-0 text-gold-700" />
         <div>
           <p className="text-sm font-semibold text-gold-900">{t('kb.verificationTitle')}</p>
@@ -236,7 +236,7 @@ export function KnowledgeBase() {
                 value={search}
                 onChange={(event) => setSearch(event.target.value)}
                 placeholder={t('kb.searchPlaceholder')}
-                className="min-h-[44px] w-full rounded-field border border-ivory-300 bg-white pl-10 pr-3 text-sm text-ink-900 outline-none transition-colors placeholder:text-ink-400 focus:border-forest-500"
+                className="min-h-[44px] w-full rounded-field border border-ivory-300 bg-white pl-10 pr-3 text-sm text-ink-900 outline-none transition-colors placeholder:text-ink-400 focus:border-forest-500 focus:ring-2 focus:ring-forest-500/15"
               />
             </div>
 

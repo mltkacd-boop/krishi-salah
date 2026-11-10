@@ -35,6 +35,21 @@ const SEVERITY_LABEL: Record<string, StringKey> = {
   warn: 'safety.severity.warn',
 }
 
+/**
+ * A one-line accent for the answer panel, keyed by the backend's decision.
+ * It repeats the badge's colour in a quieter form so a refusal is still
+ * recognisable once the reader has scrolled past the badge — and it inherits
+ * the unknown/null case as "no accent", never as an approval colour.
+ */
+const ACCENT: Record<string, string> = {
+  ACTIONABLE_RECOMMENDATION: 'border-t-[3px] border-t-forest-600',
+  EDUCATIONAL_INFORMATION: 'border-t-[3px] border-t-sage-400',
+  SAFETY_REFUSAL: 'border-t-[3px] border-t-danger-500',
+  REGULATORY_VERIFICATION_REQUIRED: 'border-t-[3px] border-t-gold-400',
+  ESCALATION_REQUIRED: 'border-t-[3px] border-t-ink-700',
+  CLARIFICATION_REQUIRED: 'border-t-[3px] border-t-ivory-400',
+}
+
 function disclosureKey(item: SafetyDisclosure): string {
   return `${item.field}|${item.status}|${item.value ?? ''}|${item.note ?? ''}`
 }
@@ -377,6 +392,7 @@ export function AdvisoryResult({ response }: { response: AdvisoryResponse }) {
   const t = tFor(answerLang)
   const answered = response.outcome === 'answered'
   const missing = response.missing_information ?? []
+  const accent = ACCENT[response.decision ?? ''] ?? ''
 
   const nextKeys = nextStepKeys(
     response.outcome,
@@ -396,7 +412,7 @@ export function AdvisoryResult({ response }: { response: AdvisoryResponse }) {
       />
 
       {/* A. Answer summary */}
-      <Card>
+      <Card className={accent}>
         <div className="border-b border-ivory-200 px-5 py-4 sm:px-6">
           <div className="flex flex-wrap items-start justify-between gap-4">
             <div className="min-w-0">
@@ -421,7 +437,7 @@ export function AdvisoryResult({ response }: { response: AdvisoryResponse }) {
               </div>
 
               {response.sections.length > 0 && (
-                <dl className="mt-6 space-y-5 border-t border-ivory-200 pt-5">
+                <dl className="mt-6 max-w-[68ch] space-y-5 border-t border-ivory-200 pt-5">
                   {response.sections.map((section, index) => (
                     <div key={`${section.heading ?? 'section'}-${index}`}>
                       <dt className="text-sm font-semibold text-ink-900">{section.heading}</dt>
@@ -430,7 +446,7 @@ export function AdvisoryResult({ response }: { response: AdvisoryResponse }) {
                           {(section.items ?? []).map((item, itemIndex) => (
                             <li
                               key={itemIndex}
-                              className="flex gap-2.5 text-sm leading-6 text-ink-700"
+                              className="flex gap-2.5 text-[15px] leading-7 text-ink-700"
                             >
                               <span className="mt-2.5 h-1 w-1 flex-shrink-0 rounded-full bg-forest-500" />
                               <span>{item}</span>
@@ -445,7 +461,7 @@ export function AdvisoryResult({ response }: { response: AdvisoryResponse }) {
             </>
           ) : (
             <div>
-              <p className="text-sm leading-7 text-ink-800 sm:text-[15px]">
+              <p className="max-w-[68ch] text-[15px] leading-7 text-ink-800">
                 {response.message ?? t('result.gateWhy')}
               </p>
             </div>
@@ -490,6 +506,23 @@ export function AdvisoryResult({ response }: { response: AdvisoryResponse }) {
           </div>
         </Card>
       )}
+
+      {/* E. Next steps */}
+      <Card className="border-l-[3px] border-l-forest-700">
+        <Section
+          title={t('result.next.title')}
+          icon={<Icon name="arrow-right" className="h-4 w-4 text-forest-700" />}
+        >
+          <ul className="space-y-2.5">
+            {nextKeys.map((key) => (
+              <li key={key} className="flex gap-2.5 text-sm leading-6 text-ink-800">
+                <Icon name="check" className="mt-1 h-3.5 w-3.5 flex-shrink-0 text-forest-600" />
+                <span>{t(key)}</span>
+              </li>
+            ))}
+          </ul>
+        </Section>
+      </Card>
 
       {/* C. Evidence and sources. An empty source card on a refusal says nothing
              the decision above has not already said, so it is only rendered when
@@ -546,23 +579,6 @@ export function AdvisoryResult({ response }: { response: AdvisoryResponse }) {
           </Section>
         </Card>
       )}
-
-      {/* E. Next steps */}
-      <Card className="border-l-4 border-l-forest-700">
-        <Section
-          title={t('result.next.title')}
-          icon={<Icon name="arrow-right" className="h-4 w-4 text-forest-700" />}
-        >
-          <ul className="space-y-2.5">
-            {nextKeys.map((key) => (
-              <li key={key} className="flex gap-2.5 text-sm leading-6 text-ink-800">
-                <span className="mt-2.5 h-1 w-1 flex-shrink-0 rounded-full bg-forest-600" />
-                <span>{t(key)}</span>
-              </li>
-            ))}
-          </ul>
-        </Section>
-      </Card>
 
       {/* Why — the rule that produced the decision, in plain words */}
       <Card>

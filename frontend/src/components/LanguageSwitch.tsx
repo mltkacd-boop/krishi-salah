@@ -9,6 +9,8 @@ const OPTIONS = [
 interface LanguageSwitchProps {
   /** `full` shows the word for each option; `compact` shows Auto / EN / हिं. */
   variant?: 'full' | 'compact'
+  /** `dark` is for the forest footer. */
+  tone?: 'light' | 'dark'
   label?: string
   className?: string
 }
@@ -20,14 +22,23 @@ interface LanguageSwitchProps {
  * question. It cannot change what the backend decides, and the answer's own
  * language is reported separately on the result.
  */
-export function LanguageSwitch({ variant = 'compact', label, className = '' }: LanguageSwitchProps) {
+export function LanguageSwitch({
+  variant = 'compact',
+  tone = 'light',
+  label,
+  className = '',
+}: LanguageSwitchProps) {
   const { choice, setChoice, t } = useLanguage()
+  const dark = tone === 'dark'
 
   return (
     <div className={className}>
       {label && <p className="label-caps mb-1.5">{label}</p>}
       <div
-        className="inline-flex items-center rounded-full border border-ivory-400 bg-white p-0.5"
+        className={
+          'inline-flex max-w-full items-center gap-0.5 rounded-full p-0.5 ' +
+          (dark ? 'border border-sage-400/35 bg-white/5' : 'border border-ivory-400 bg-white')
+        }
         role="group"
         aria-label={label ?? t('advisory.language')}
       >
@@ -42,10 +53,14 @@ export function LanguageSwitch({ variant = 'compact', label, className = '' }: L
               aria-pressed={active}
               title={t(option.labelKey)}
               className={
-                'min-h-[34px] rounded-full px-2.5 text-xs transition-colors ' +
+                'min-h-[34px] whitespace-nowrap rounded-full px-2.5 text-xs transition-colors duration-200 ' +
                 (active
-                  ? 'bg-forest-700 font-semibold text-white'
-                  : 'font-medium text-ink-500 hover:bg-ivory-100 hover:text-ink-800')
+                  ? dark
+                    ? 'bg-sage-300 font-semibold text-forest-900'
+                    : 'bg-forest-700 font-semibold text-white'
+                  : dark
+                    ? 'font-medium text-sage-200 hover:bg-white/10 hover:text-white'
+                    : 'font-medium text-ink-500 hover:bg-ivory-100 hover:text-ink-800')
               }
             >
               {text}

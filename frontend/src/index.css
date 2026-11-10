@@ -16,14 +16,47 @@
   }
 
   :lang(hi) {
-    line-height: 1.75;
+    line-height: 1.8;
+  }
+
+  /* Devanagari: no negative tracking (it closes up matras) and more leading than
+     Latin at display sizes, where a 1.05 line height cuts the vowel signs of one
+     line into the next. */
+  :lang(hi) h1,
+  :lang(hi) h2,
+  :lang(hi) h3 {
+    letter-spacing: 0;
+    line-height: 1.32;
+  }
+
+  :lang(hi) .text-hero {
+    line-height: 1.2;
+  }
+
+  :lang(hi) .text-section {
+    line-height: 1.35;
+  }
+
+  :lang(hi) .label-caps {
+    letter-spacing: 0.08em;
   }
 
   h1,
   h2,
   h3 {
     @apply font-display;
-    letter-spacing: -0.015em;
+    letter-spacing: -0.02em;
+  }
+
+  /* Long headings break better when the browser balances the lines; where it is
+     unsupported the rule is simply ignored. */
+  h1,
+  h2 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -34,6 +67,7 @@
     *::before,
     *::after {
       animation-duration: 0.001ms !important;
+      animation-delay: 0ms !important;
       transition-duration: 0.001ms !important;
     }
   }
@@ -42,11 +76,11 @@
 /* One focus treatment everywhere. Keyboard users get a visible ring; pointer
    users never see it on buttons. */
 :where(a, button, input, textarea, select, summary, [tabindex]):focus-visible {
-  @apply outline-none ring-2 ring-forest-600/45 ring-offset-2 ring-offset-ivory-100;
+  @apply outline-none ring-2 ring-forest-500/50 ring-offset-2 ring-offset-ivory-100;
 }
 
 ::selection {
-  @apply bg-forest-200 text-forest-900;
+  @apply bg-sage-300 text-forest-900;
 }
 
 @layer components {
@@ -80,5 +114,34 @@
   /* Tap target floor for mobile: 44px, per the accessibility brief. */
   .tap {
     @apply inline-flex min-h-[44px] items-center justify-center;
+  }
+
+  /* A hairline that reads as a drawn rule rather than a border, used to join
+     the numbered steps on wide screens. */
+  .rule-line {
+    @apply h-px w-full origin-left bg-gradient-to-r from-ivory-400 to-transparent;
+  }
+}
+
+/* Entrance motion.
+   Deliberately transform-only: the content is fully opaque from the first
+   paint, so nothing on the page depends on an animation having run. A reader
+   with reduced-motion gets no movement at all. */
+@layer utilities {
+  .reveal {
+    transform: translateY(12px);
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .reveal.is-visible {
+    transform: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .reveal.is-visible {
+      transform: none;
+      transition: none;
+    }
   }
 }

@@ -30,8 +30,8 @@ export const STRINGS = {
     'home.title': 'Better crop decisions start with better information.',
     'home.body':
       'Ask about a pest, a crop or a safety rule. You get the answer we can support from published agricultural sources — and a clear next step when we cannot.',
-    'home.ctaPrimary': 'Ask about your crop',
-    'home.ctaSecondary': 'Explore the safety guide',
+    'home.ctaPrimary': 'Get crop guidance',
+    'home.ctaSecondary': 'Explore knowledge base',
     'home.imageCaption': 'Cotton — illustrative photograph',
 
     'home.composerTitle': 'Ask about your crop',
@@ -123,6 +123,8 @@ export const STRINGS = {
     'result.gateWhy':
       'The question was stopped before any knowledge-base record was selected, so no safety rule had to run. This is a retrieval-stage decision, not a rule decision.',
     'result.gateReason': 'Gate reason',
+    'result.whySafetyGate':
+      'The answer was stopped at the safety stage: a value it depends on is not published in the cited source, so no dose, interval or protective-equipment requirement was produced.',
     'result.imageCaption': 'Cotton — illustrative photograph',
     'result.missing': 'Missing information',
     'result.missingBody':
@@ -320,6 +322,86 @@ export const STRINGS = {
     // technical project title only.
     'footer.built': 'Safe Pesticide Use Knowledge and Advisory Assistant',
     'footer.evaluation': 'Evaluation details',
+
+    /* Homepage: hero note, journey, crops, learning, trust ------------------ */
+    'home.hero.note':
+      'Educational guidance only — no pesticide dose, PHI, REI or product approval is claimed.',
+    'home.how.eyebrow': 'How it works',
+    'home.how.title': 'How Krishi Salah works',
+    'home.how.subtitle': 'Three steps, in the language you read.',
+    'home.how.1.title': 'Select your crop',
+    'home.how.1.body': 'Start with the crop you are growing, or name it in your own question.',
+    'home.how.2.title': 'Describe the problem',
+    'home.how.2.body':
+      'Say what you see on the plant — a pest, a symptom, or a question about safe use.',
+    'home.how.3.title': 'Read the guidance',
+    'home.how.3.body':
+      'Evidence-based educational guidance with its source, and an explicit note when a safety value is unpublished.',
+    'home.crops.eyebrow': 'Coverage',
+    'home.crops.title': 'Supported crops',
+    'home.crops.subtitle':
+      'The pilot covers five crops. Each has a small set of records transcribed from Indian agricultural sources.',
+    'home.crops.imageNote': 'Illustrative crop photography',
+    'home.crops.cta': 'Open the knowledge base',
+    'home.crops.records': 'records',
+    'home.crops.recordOne': 'record',
+    'home.crop.pilot': 'Pilot crop',
+    'home.crop.cta': 'Ask about this crop',
+    'home.crop.rice': 'Rice',
+    'home.crop.wheat': 'Wheat',
+    'home.crop.maize': 'Maize',
+    'home.crop.cotton': 'Cotton',
+    'home.crop.tomato': 'Tomato',
+    'home.crop.question.rice': 'How do I manage pests in rice?',
+    'home.crop.question.wheat': 'How do I manage pests in wheat?',
+    'home.crop.question.maize': 'How do I manage pests in maize?',
+    'home.crop.question.cotton': 'How do I manage pests in cotton?',
+    'home.crop.question.tomato': 'How do I manage pests in tomato?',
+    'home.learn.eyebrow': 'Knowledge library',
+    'home.learn.title': 'Knowledge and learning',
+    'home.learn.subtitle':
+      'Read the material behind an answer: how a pest is identified, what the safety rules mean, and where each record comes from.',
+    'home.learn.protection.title': 'Crop protection education',
+    'home.learn.protection.body':
+      'Cultural, mechanical, biological and chemical measures, described in the words the cited source uses.',
+    'home.learn.identify.title': 'Pest identification',
+    'home.learn.identify.body':
+      'Common and scientific names for every pest record, so the same insect is recognised by the name your extension officer uses.',
+    'home.learn.knowledge.title': 'Agricultural knowledge',
+    'home.learn.knowledge.body':
+      'Economic thresholds, control timing and record-level detail, kept in the source’s terms rather than rewritten.',
+    'home.learn.safety.title': 'Safety awareness',
+    'home.learn.safety.body':
+      'What PHI, REI and protective equipment mean, and why one unpublished value keeps an answer educational.',
+    'home.learn.cta': 'Browse the library',
+    'home.trust.title': 'Safety and trust',
+    'home.trust.body':
+      'Everything on this page is assembled from published Indian agricultural sources and then checked against fixed safety rules. Where a value is missing, the answer says so instead of filling it in.',
+    'home.trust.1': 'Every record cites the authority and the page it was transcribed from.',
+    'home.trust.2': 'PHI, REI and protective-equipment status is shown for every matched record.',
+    'home.trust.3':
+      'No product has been checked against the CIB&RC register, so nothing here is a regulatory approval.',
+    'home.trust.limits': 'What this pilot does not do',
+    'home.dataset.note': 'Counts are read live from the knowledge-base service.',
+
+    /* Advisory workflow ----------------------------------------------------- */
+    'advisory.crops': 'Start with a crop',
+    'advisory.cropsHint':
+      'Pick a crop to begin a question. Add what you see on the plant afterwards.',
+    'advisory.loading.title': 'Checking the knowledge base',
+    'advisory.loading.1': 'Reading your question',
+    'advisory.loading.2': 'Matching source records',
+    'advisory.loading.3': 'Applying the safety rules',
+    'advisory.empty.hint': 'Every answer shows its source, and what is missing.',
+
+    /* Footer ---------------------------------------------------------------- */
+    'footer.section.ask': 'Ask and learn',
+    'footer.section.project': 'Project',
+    'footer.section.language': 'Language',
+    'footer.transparency.title': 'Source transparency',
+    'footer.transparency.body':
+      'Each record is transcribed from a cited Indian agricultural source and checked against five fixed safety rules. A safety value that is not published in the source is shown as missing.',
+    'footer.educational': 'Educational pilot — not a pesticide recommendation.',
   },
   hi: {
     'brand.name': 'कृषि सलाह',
@@ -337,8 +419,8 @@ export const STRINGS = {
     'home.title': 'बेहतर फसल निर्णय बेहतर जानकारी से शुरू होते हैं।',
     'home.body':
       'कीट, फसल या सुरक्षा नियम के बारे में पूछें। उत्तर केवल प्रकाशित कृषि स्रोतों से दिया जाता है — और जब उत्तर संभव न हो, तो अगला सही कदम बताया जाता है।',
-    'home.ctaPrimary': 'अपनी फसल के बारे में पूछें',
-    'home.ctaSecondary': 'सुरक्षा मार्गदर्शन देखें',
+    'home.ctaPrimary': 'अपनी फसल के लिए सलाह पाएँ',
+    'home.ctaSecondary': 'ज्ञान पुस्तकालय देखें',
     'home.imageCaption': 'कपास — उदाहरण चित्र',
 
     'home.composerTitle': 'अपनी फसल के बारे में पूछें',
@@ -430,6 +512,8 @@ export const STRINGS = {
     'result.gateWhy':
       'प्रश्न को ज्ञान-आधार का कोई रिकॉर्ड चुनने से पहले ही रोक दिया गया, इसलिए कोई सुरक्षा नियम चलाने की आवश्यकता नहीं पड़ी। यह खोज-चरण का निर्णय है, नियम का निर्णय नहीं।',
     'result.gateReason': 'रोक का कारण',
+    'result.whySafetyGate':
+      'उत्तर सुरक्षा चरण पर रोका गया: जिस मान पर वह निर्भर है वह उद्धृत स्रोत में प्रकाशित नहीं है, इसलिए कोई मात्रा, प्रतीक्षा अवधि या सुरक्षा उपकरण की शर्त नहीं दी गई।',
     'result.imageCaption': 'कपास — उदाहरण चित्र',
     'result.missing': 'अनुपलब्ध जानकारी',
     'result.missingBody':
@@ -623,6 +707,80 @@ export const STRINGS = {
     'footer.libraryLink': 'ज्ञान पुस्तकालय',
     'footer.built': 'कीटनाशक सुरक्षित उपयोग ज्ञान और सलाह सहायक',
     'footer.evaluation': 'मूल्यांकन विवरण',
+
+    'home.hero.note':
+      'केवल शैक्षिक मार्गदर्शन — किसी कीटनाशक की मात्रा, PHI, REI या उत्पाद अनुमोदन का दावा नहीं।',
+    'home.how.eyebrow': 'कैसे काम करता है',
+    'home.how.title': 'कृषि सलाह कैसे काम करती है',
+    'home.how.subtitle': 'तीन चरण, उसी भाषा में जिसमें आप पढ़ते हैं।',
+    'home.how.1.title': 'अपनी फसल चुनें',
+    'home.how.1.body': 'जिस फसल को उगा रहे हैं उससे शुरू करें, या अपने प्रश्न में उसका नाम लिखें।',
+    'home.how.2.title': 'समस्या बताएँ',
+    'home.how.2.body': 'पौधे पर जो दिख रहा है वह बताएँ — कोई कीट, कोई लक्षण, या सुरक्षित उपयोग से जुड़ा प्रश्न।',
+    'home.how.3.title': 'मार्गदर्शन पढ़ें',
+    'home.how.3.body':
+      'स्रोत के साथ प्रमाण-आधारित शैक्षिक मार्गदर्शन मिलेगा, और जो सुरक्षा मान प्रकाशित नहीं है वह स्पष्ट रूप से बताया जाएगा।',
+    'home.crops.eyebrow': 'कवरेज',
+    'home.crops.title': 'समर्थित फसलें',
+    'home.crops.subtitle':
+      'पायलट में पाँच फसलें हैं। हर फसल के लिए भारतीय कृषि स्रोतों से हाथ से जाँचे गए कुछ रिकॉर्ड हैं।',
+    'home.crops.imageNote': 'फसल चित्र — उदाहरण के लिए',
+    'home.crops.cta': 'ज्ञान पुस्तकालय खोलें',
+    'home.crops.records': 'रिकॉर्ड',
+    'home.crops.recordOne': 'रिकॉर्ड',
+    'home.crop.pilot': 'पायलट फसल',
+    'home.crop.cta': 'इस फसल के बारे में पूछें',
+    'home.crop.rice': 'धान',
+    'home.crop.wheat': 'गेहूँ',
+    'home.crop.maize': 'मक्का',
+    'home.crop.cotton': 'कपास',
+    'home.crop.tomato': 'टमाटर',
+    'home.crop.question.rice': 'धान में कीटों का प्रबंधन कैसे करें?',
+    'home.crop.question.wheat': 'गेहूँ में कीटों का प्रबंधन कैसे करें?',
+    'home.crop.question.maize': 'मक्का में कीटों का प्रबंधन कैसे करें?',
+    'home.crop.question.cotton': 'कपास में कीटों का प्रबंधन कैसे करें?',
+    'home.crop.question.tomato': 'टमाटर में कीटों का प्रबंधन कैसे करें?',
+    'home.learn.eyebrow': 'ज्ञान पुस्तकालय',
+    'home.learn.title': 'ज्ञान और सीख',
+    'home.learn.subtitle':
+      'उत्तर के पीछे की सामग्री पढ़ें: कीट की पहचान कैसे होती है, सुरक्षा नियमों का क्या अर्थ है, और हर रिकॉर्ड कहाँ से आया है।',
+    'home.learn.protection.title': 'फसल सुरक्षा शिक्षा',
+    'home.learn.protection.body':
+      'सांस्कृतिक, यांत्रिक, जैविक और रासायनिक उपाय, ठीक उन शब्दों में जो उद्धृत स्रोत में लिखे हैं।',
+    'home.learn.identify.title': 'कीट पहचान',
+    'home.learn.identify.body':
+      'हर कीट रिकॉर्ड के सामान्य और वैज्ञानिक नाम, ताकि वही कीट उसी नाम से पहचाना जाए जो आपका कृषि विस्तार अधिकारी बोलता है।',
+    'home.learn.knowledge.title': 'कृषि ज्ञान',
+    'home.learn.knowledge.body':
+      'आर्थिक क्षति स्तर, नियंत्रण का समय और रिकॉर्ड का विवरण — स्रोत के शब्दों में, बदले बिना।',
+    'home.learn.safety.title': 'सुरक्षा जागरूकता',
+    'home.learn.safety.body':
+      'PHI, REI और व्यक्तिगत सुरक्षा उपकरण का अर्थ, और क्यों एक अनुपलब्ध मान उत्तर को शैक्षिक ही रखता है।',
+    'home.learn.cta': 'पुस्तकालय देखें',
+    'home.trust.title': 'सुरक्षा और भरोसा',
+    'home.trust.body':
+      'इस पृष्ठ की हर बात प्रकाशित भारतीय कृषि स्रोतों से ली गई है और तय सुरक्षा नियमों से जाँची गई है। जहाँ कोई मान नहीं है, वहाँ अनुमान लगाने के बजाय स्पष्ट बताया जाता है।',
+    'home.trust.1': 'हर रिकॉर्ड उस संस्था और पृष्ठ का हवाला देता है जहाँ से वह लिया गया है।',
+    'home.trust.2': 'हर मिलाए गए रिकॉर्ड के लिए PHI, REI और सुरक्षा उपकरण की स्थिति दिखाई जाती है।',
+    'home.trust.3': 'किसी उत्पाद की CIB&RC रजिस्टर से जाँच नहीं हुई है, इसलिए यहाँ कुछ भी नियामक अनुमोदन नहीं है।',
+    'home.trust.limits': 'यह पायलट क्या नहीं करता',
+    'home.dataset.note': 'ये संख्याएँ ज्ञान आधार सेवा से सीधे पढ़ी जाती हैं।',
+
+    'advisory.crops': 'अपनी फसल चुनकर शुरू करें',
+    'advisory.cropsHint': 'प्रश्न शुरू करने के लिए फसल चुनें। पौधे पर जो दिख रहा है, बाद में जोड़ सकते हैं।',
+    'advisory.loading.title': 'ज्ञान आधार देखा जा रहा है',
+    'advisory.loading.1': 'आपका प्रश्न पढ़ा जा रहा है',
+    'advisory.loading.2': 'स्रोत रिकॉर्ड मिलाए जा रहे हैं',
+    'advisory.loading.3': 'सुरक्षा नियम लागू किए जा रहे हैं',
+    'advisory.empty.hint': 'हर उत्तर अपना स्रोत और जो अनुपलब्ध है, दोनों दिखाता है।',
+
+    'footer.section.ask': 'पूछें और सीखें',
+    'footer.section.project': 'परियोजना',
+    'footer.section.language': 'भाषा',
+    'footer.transparency.title': 'स्रोत की पारदर्शिता',
+    'footer.transparency.body':
+      'हर रिकॉर्ड किसी उद्धृत भारतीय कृषि स्रोत से लिया गया है और पाँच तय सुरक्षा नियमों से जाँचा गया है। स्रोत में जो सुरक्षा मान प्रकाशित नहीं है, उसे अनुपलब्ध ही दिखाया जाता है।',
+    'footer.educational': 'शैक्षिक पायलट — यह कीटनाशक सिफ़ारिश नहीं है।',
   },
 } as const
 

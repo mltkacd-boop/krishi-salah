@@ -1,9 +1,24 @@
 import { Link, Outlet } from 'react-router-dom'
 
 import { BrandMark, BottomNav, DesktopNav } from '../components/Nav'
+import { buttonClass } from '../components/Button'
 import { ErrorBoundary } from '../components/ErrorBoundary'
+import { Icon } from '../components/Icon'
 import { LanguageSwitch } from '../components/LanguageSwitch'
 import { useLanguage } from '../i18n/LanguageProvider'
+
+/** Footer groups. Kept as data so both languages share one structure. */
+const FOOTER_PRIMARY = [
+  { to: '/', key: 'nav.home' as const },
+  { to: '/advisory', key: 'nav.advisory' as const },
+  { to: '/knowledge-base', key: 'nav.knowledge' as const },
+  { to: '/safety-guidelines', key: 'nav.safety' as const },
+]
+
+const FOOTER_SECONDARY = [
+  { to: '/project-info', key: 'nav.project' as const },
+  { to: '/evaluation', key: 'footer.evaluation' as const },
+]
 
 export function AppLayout() {
   const { t } = useLanguage()
@@ -17,8 +32,8 @@ export function AppLayout() {
         {t('nav.skip')}
       </a>
 
-      <header className="sticky top-0 z-30 border-b border-ivory-300 bg-ivory-100/90 backdrop-blur">
-        <div className="mx-auto flex h-16 max-w-shell items-center justify-between gap-4 px-4 sm:px-6 lg:px-10">
+      <header className="sticky top-0 z-30 border-b border-ivory-300/80 bg-ivory-100/85 shadow-header backdrop-blur-md">
+        <div className="mx-auto flex h-16 max-w-shell items-center justify-between gap-4 px-4 sm:px-6 lg:h-[72px] lg:px-10">
           <Link to="/" className="flex-shrink-0 rounded-lg" aria-label={t('brand.name')}>
             <BrandMark />
           </Link>
@@ -27,12 +42,19 @@ export function AppLayout() {
 
           <div className="flex flex-shrink-0 items-center gap-2">
             <LanguageSwitch variant="compact" />
+            <Link
+              to="/advisory"
+              className={buttonClass('primary', 'md', 'hidden px-4 text-[13px] sm:inline-flex')}
+            >
+              {t('advisory.submit')}
+              <Icon name="arrow-right" className="h-3.5 w-3.5" />
+            </Link>
           </div>
         </div>
       </header>
 
       <main id="main" className="flex-1 pb-24 lg:pb-0">
-        <div className="mx-auto max-w-shell px-4 py-6 sm:px-6 sm:py-8 lg:px-10 lg:py-12">
+        <div className="mx-auto max-w-shell px-4 py-6 sm:px-6 sm:py-8 lg:px-10 lg:py-10">
           {/* The page renders inside the boundary; the header, footer and
               navigation stay mounted, so a broken page is still a usable site. */}
           <ErrorBoundary>
@@ -41,45 +63,60 @@ export function AppLayout() {
         </div>
       </main>
 
-      <footer className="border-t border-ivory-300 bg-ivory-50">
-        <div className="mx-auto max-w-shell px-4 py-8 sm:px-6 lg:px-10 lg:py-10">
-          <div className="grid gap-8 md:grid-cols-[1.6fr_1fr]">
+      <footer className="mt-4 bg-forest-900 text-sage-200">
+        <div className="mx-auto max-w-shell px-4 py-10 sm:px-6 lg:px-10 lg:py-14">
+          <div className="grid gap-10 lg:grid-cols-[1.35fr_1fr_1fr_1.1fr] lg:gap-12">
             <div>
-              <BrandMark />
-              <p className="mt-3 max-w-xl text-xs leading-5 text-ink-500">
+              <BrandMark tone="dark" />
+              <p className="mt-4 max-w-sm text-xs leading-6 text-sage-200">
                 {t('footer.disclaimer')}
               </p>
             </div>
-            <nav aria-label="Secondary" className="flex flex-col gap-2 md:items-end">
-              <Link
-                to="/project-info"
-                className="text-xs font-medium text-ink-600 underline-offset-4 hover:text-forest-800 hover:underline"
-              >
-                {t('nav.project')}
-              </Link>
-              <Link
-                to="/safety-guidelines"
-                className="text-xs font-medium text-ink-600 underline-offset-4 hover:text-forest-800 hover:underline"
-              >
-                {t('footer.safetyLink')}
-              </Link>
-              <Link
-                to="/knowledge-base"
-                className="text-xs font-medium text-ink-600 underline-offset-4 hover:text-forest-800 hover:underline"
-              >
-                {t('footer.libraryLink')}
-              </Link>
-              <Link
-                to="/evaluation"
-                className="text-xs font-medium text-ink-500 underline-offset-4 hover:text-forest-800 hover:underline"
-              >
-                {t('footer.evaluation')}
-              </Link>
+
+            <nav aria-label="Footer" className="flex flex-col gap-2.5">
+              <p className="text-2xs font-semibold uppercase tracking-[0.14em] text-sage-400">
+                {t('footer.section.ask')}
+              </p>
+              {FOOTER_PRIMARY.map((item) => (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  className="w-fit text-xs font-medium text-ivory-50/90 underline-offset-4 transition-colors hover:text-white hover:underline"
+                >
+                  {t(item.key)}
+                </Link>
+              ))}
             </nav>
+
+            <nav aria-label="Secondary" className="flex flex-col gap-2.5">
+              <p className="text-2xs font-semibold uppercase tracking-[0.14em] text-sage-400">
+                {t('footer.section.project')}
+              </p>
+              {FOOTER_SECONDARY.map((item) => (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  className="w-fit text-xs font-medium text-ivory-50/90 underline-offset-4 transition-colors hover:text-white hover:underline"
+                >
+                  {t(item.key)}
+                </Link>
+              ))}
+            </nav>
+
+            <div>
+              <p className="text-2xs font-semibold uppercase tracking-[0.14em] text-sage-400">
+                {t('footer.section.language')}
+              </p>
+              <LanguageSwitch variant="full" tone="dark" className="mt-3" />
+              <p className="mt-4 text-2xs leading-5 text-sage-300">{t('footer.transparency.title')}</p>
+              <p className="mt-1 text-xs leading-5 text-sage-200">{t('footer.transparency.body')}</p>
+            </div>
           </div>
-          <p className="mt-6 border-t border-ivory-300 pt-4 text-2xs text-ink-500">
-            {t('footer.built')}
-          </p>
+
+          <div className="mt-10 flex flex-col gap-2 border-t border-white/10 pt-5 text-2xs text-sage-300 sm:flex-row sm:items-center sm:justify-between">
+            <span>{t('footer.educational')}</span>
+            <span>{t('footer.built')}</span>
+          </div>
         </div>
       </footer>
 

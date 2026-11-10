@@ -43,18 +43,18 @@ export function SafetyGuidelines() {
   }, [])
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-8">
       <PageHeader eyebrow={t('nav.safety')} title={t('safety.title')} description={t('safety.subtitle')} />
 
       <section>
-        <h2 className="font-display text-[17px] font-semibold text-ink-900">{t('safety.termsTitle')}</h2>
-        <div className="mt-3 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+        <h2 className="text-section font-semibold tracking-[-0.02em] text-forest-900">{t('safety.termsTitle')}</h2>
+        <div className="mt-4 grid gap-3 sm:grid-cols-2 sm:gap-4 xl:grid-cols-3">
           {TERMS.map((term) => (
-            <Card key={term.titleKey} className="p-5">
-              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-sage-200 text-forest-800">
+            <Card key={term.titleKey} className="p-5 transition-[box-shadow,border-color] duration-300 hover:border-sage-300 hover:shadow-raised sm:p-6">
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-sage-100 text-forest-800 ring-1 ring-inset ring-sage-300">
                 <Icon name={term.icon} className="h-[18px] w-[18px]" />
               </span>
-              <h3 className="mt-3 font-display text-[15px] font-semibold leading-snug text-ink-900">
+              <h3 className="mt-4 font-display text-[15px] font-semibold leading-snug text-ink-900">
                 {t(term.titleKey)}
               </h3>
               <p className="mt-1.5 text-sm leading-6 text-ink-600">{t(term.bodyKey)}</p>
@@ -63,7 +63,7 @@ export function SafetyGuidelines() {
         </div>
       </section>
 
-      <section className="rounded-card border border-gold-300 bg-gold-50 px-5 py-5 sm:px-6">
+      <section className="rounded-panel border border-gold-300 bg-gold-50 px-5 py-5 shadow-card sm:px-7 sm:py-6">
         <div className="flex items-start gap-3">
           <span className="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-gold-200 text-gold-900">
             <Icon name="alert" className="h-[18px] w-[18px]" />
