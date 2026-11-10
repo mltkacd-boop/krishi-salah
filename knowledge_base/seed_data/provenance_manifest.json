@@ -1,0 +1,110 @@
+[
+  {
+    "approved_use_id": "AU-COTTON-AMERICAN-BOLLWORM-01",
+    "source_id": "SRC-TNAU-COTTON-BOLLWORM-01",
+    "source_url": "https://agritech.tnau.ac.in/crop_protection/cotton/crop_prot_crop_insectpest%20_cotton_1.html",
+    "retrieved_date": "2026-11-03",
+    "fetch_method": "HTTP GET with a standard browser User-Agent header (plain GET without one also succeeds for this host)",
+    "document_sha256": "cc968466ba77484daad7ae001f099b1f335354d447fdbf340b97cef323d17762",
+    "document_bytes": 17863,
+    "verbatim_excerpt": "Application of Nuclear Polyhedrosis Virus (NPV) at 1.2 x 1012 POB / acre in evening hours at 7th and 12th week after sowing. Application of Bacillus thuringiensis var. kurstaki 5%WP 300-400g/acre ... Inundative release of egg parasitoid, Trichogramma chilonis at 2.5 cc / acre at 15 days interval 3 times from 45 days after sowing. ... At early stages of square formation apply one of the following insecticides viz., Azadirachtin 0.03% EC 1000ml/acre or Diflubenzuron 25% WP 120-140g/acre or Emamectin benzoate 5% SG 76-88g/acre or Fipronil 5% SC 800ml/acre or Flubendiamide 20% WG 100g/acre or Flubendiamide 39.35% SC 40-50 ml/acre or Indoxacarb 14.5% SC 200ml/acre or Novaluron 10%EC 400ml/acre or Pyridalyl 10% EC 300-400ml/acre or Chlorantraniliprole 18.5% SC 60ml/acre or Lufenuron 5.4% EC 240ml/acre or Spinosad 45.0% SC 66-88ml/acre. During boll formation and maturation stage, apply any one of the following insecticides viz.,Chlorantraniliprole 18.5% SC 60 ml/acre or Lufenuron 5.4% EC 240 ml/acre or Spinosad 45.0% SC 66-88ml/acre.",
+    "verdict": "MATCH",
+    "notes": "The source lists 12 interchangeable chemical options for the early square-formation stage; the KB record retains only 2 (Azadirachtin, Chlorantraniliprole) as a representative subset. This was previously described as 'recorded here exactly as the source groups them', which overstated completeness (F7) and has been corrected in approved_uses.json. All recorded values (NPV dose, Bt dose, Trichogramma dose, the two kept chemical doses) are verbatim matches. No PHI/REI/PPE appear anywhere on this page for any product."
+  },
+  {
+    "approved_use_id": "AU-COTTON-PINK-BOLLWORM-01",
+    "source_id": "SRC-TNAU-COTTON-PINKBW-01",
+    "source_url": "https://agritech.tnau.ac.in/crop_protection/cotton/crop_prot_crop_insectpest%20_cotton_2.html",
+    "retrieved_date": "2026-11-03",
+    "fetch_method": "HTTP GET with a standard browser User-Agent header",
+    "document_sha256": "03054458a95ec3cd04cd8377b09c5be4e3f22c78adf7ae3ded085cc308f8b7fa",
+    "document_bytes": 11220,
+    "verbatim_excerpt": "Use pheromone traps to monitor the adult moth activity @ 5 / acre. Spraying any one of the insecticides viz., Emamectin benzoate 5% SG 76-88 g/acre or Diflubenzuron 25%WP 120-140 g/acre or Chlorantraniliprole18.5% SC 60 ml /acre.",
+    "verdict": "MATCH",
+    "notes": "This source was NOT re-checked in the original Phase 3 report (it was one of the 3 outstanding sources closed in Phase 3.1). The page lists exactly 3 chemical options and the KB record includes all 3 (Emamectin benzoate, Diflubenzuron, Chlorantraniliprole) with matching doses — this record is a complete transcription, not a subset. No PHI/REI/PPE published."
+  },
+  {
+    "approved_use_id": "AU-COTTON-SPOTTED-SPINY-BOLLWORM-01",
+    "source_id": "SRC-TNAU-COTTON-SPOTTEDBW-01",
+    "source_url": "https://agritech.tnau.ac.in/crop_protection/cotton/crop_prot_crop_insectpest%20_cotton_3.html",
+    "retrieved_date": "2026-11-03",
+    "fetch_method": "HTTP GET with a standard browser User-Agent header",
+    "document_sha256": "e1498c99a14df2cf7639d34466497f38a28f8381fd21e8f7ae2499e47a50f0fd",
+    "document_bytes": 13948,
+    "verbatim_excerpt": "Application of Bacillus thuringiensis var. kurstaki 5% WP300-400g / acre or Spray any one of the following insecticides viz., Flubendiamide 39.35%SC40-50 ml/acre or Chlorantraniliprole 18.5% SC 60 ml/acre or Indoxacarb 14.5%SC 200ml/acre or Diflubenzuron 25%WP 120-140g/acre or Fipronil 5% SC 800ml/acre or Spinetoram 11.7 % SC @ 168-188 ml/acre.",
+    "verdict": "MATCH",
+    "notes": "The source lists 6 interchangeable chemical options; the KB record retains 3 (Flubendiamide, Chlorantraniliprole, Indoxacarb) as a representative subset. Previously described with the same overstated 'interchangeable options' wording as F7; corrected in approved_uses.json. Bt dose and all 3 kept chemical doses are verbatim matches. No PHI/REI/PPE published."
+  },
+  {
+    "approved_use_id": "AU-RICE-YELLOW-STEM-BORER-01",
+    "source_id": "SRC-TNAU-RICE-STEMBORER-01",
+    "source_url": "https://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_m1.html",
+    "retrieved_date": "2026-11-03",
+    "fetch_method": "HTTP GET with a standard browser User-Agent header",
+    "document_sha256": "0e9d59bfa2feeb37f00248060a77077ba5b47c6571d46d771b2f6a230a25d17c",
+    "document_bytes": 18708,
+    "verbatim_excerpt": "Spray any one of the following insecticides Acephate 75 % SP 400 g/ac Carbofuran 3% CG 10 kg/ac Carbosulfan 6% G 6.7 kg/ac Carbosulfan 25% EC 320-400 ml/ac CartapHydrochloride 50 % SP 400 g/ac Chlorantraniliprole 18.5% SC 60 ml/ac Chlorantraniliprole 0.4% G 4 kg/ac Chlorpyriphos 20% EC 500 ml/ac Fipronil 5% SC 400-600 g/ac Fipronil 80%WG 20-25 g/ac Flubendiamide 20% WG 50 g/ac Flubendiamide 39.35% W/W SC 20 g/ac Thiacloprid 21.7% SC 200 g/ac Thiamethoxam 25% WG 40 g/ac",
+    "verdict": "MATCH",
+    "notes": "The source lists 14 interchangeable chemical options; the KB record retains 3 (Chlorantraniliprole, Fipronil, Cartap Hydrochloride) as a representative subset, corrected from overstated wording (F7). The flagged dosage_unit_note ('Fipronil 5% SC 400-600 g/ac' — a gram dose on a nominally liquid SC formulation) is confirmed genuinely present in the source, not a transcription error. No PHI/REI/PPE published."
+  },
+  {
+    "approved_use_id": "AU-RICE-LEAF-FOLDER-01",
+    "source_id": "SRC-TNAU-RICE-LEAFFOLDER-01",
+    "source_url": "https://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_m5.html",
+    "retrieved_date": "2026-11-03",
+    "fetch_method": "HTTP GET with a standard browser User-Agent header",
+    "document_sha256": "2761d5bd550c4c6817530d555f5d335e90498409692bdf171e3543dec651a072",
+    "document_bytes": 13064,
+    "verbatim_excerpt": "Spray any one of the following insectcides Chlorpyriphos 20 EC 500 ml/ac Acephate 75 % SP 267-400 ml/ac Carbosulfan 6% G 6.7 kg/ac CartapHydrochloride 50 % SP 400 g/ac Chlorantraniliprole 18.5% SC 60 g/ac Chlorantraniliprole 0.4% G 4 kg/ac Fipronil 80%WG 20-25 g/ac Flubendiamide 39.35% M/M SC 20 g/ac Flubendiamide 20% WG 50-100 g/ac Thiamethoxam 25% WG 40 g/ac",
+    "verdict": "MATCH",
+    "notes": "The source lists 9 interchangeable chemical options; the KB record retains 3 (Chlorantraniliprole, Fipronil, Chlorpyriphos) as a representative subset, corrected from overstated wording (F7). The flagged dosage_unit_note ('Chlorantraniliprole 18.5% SC 60 g/ac', a gram dose for the same product that is dosed in ml/ac on the Yellow Stem Borer page from the same portal) is confirmed genuinely present and genuinely inconsistent across the two TNAU pages — not a transcription error on our side. No PHI/REI/PPE published."
+  },
+  {
+    "approved_use_id": "AU-MAIZE-FALL-ARMYWORM-01",
+    "source_id": "SRC-TNAU-MAIZE-FAW-01",
+    "source_url": "https://agritech.tnau.ac.in/crop_protection/maize/crop_prot_maize_fall_armyworm.html",
+    "retrieved_date": "2026-11-03",
+    "fetch_method": "HTTP GET with a standard browser User-Agent header",
+    "document_sha256": "62250eb04f98ceb6572acd7276ba09f3cbcb0efc0b6a3f6af2ec8b167d059342",
+    "document_bytes": 10495,
+    "verbatim_excerpt": "Seed treatment with cyantraniliprole 19.8% + thiamethoxam 19.8% FS @ 4 ml/kg seed. ... Spray azadirachtin 1500 ppm @ 2.5 lit/ha or chlorantraniliprole 18.5 SC @ 200ml/ha (or) flubendiamide 480SC@ 250ml/ha at early stage (15 - 20 DAE). Spray Metarhizium anisopliae (TNAU-MA-GDU isolate) @ 2.5 kg/ha or emamectin benzoate 5 SG @ 200g/ha or novaluron 10 EC @ 750 ml/ha or spinetoram 11.7 SC @ 250 ml/ha at late whorl stage (35 - 40 DAE). One of the insecticides recommended in late whorl stages can be used at cob formation stage if needed, but repetition to be avoided. ... Updated on May 2023",
+    "verdict": "MATCH",
+    "notes": "This source was NOT re-checked in the original Phase 3 report (2nd of the 3 outstanding sources closed in Phase 3.1). Seed-treatment dose, early-stage options (2 of 3 kept: Azadirachtin, Chlorantraniliprole), late-whorl options (2 of 4 kept: Metarhizium, Emamectin benzoate), and the 'repetition to be avoided' caveat are all verbatim matches. The explicit 'Updated on May 2023' date is confirmed present. No PHI/REI/PPE published."
+  },
+  {
+    "approved_use_id": "AU-TOMATO-FRUIT-BORER-01",
+    "source_id": "SRC-TNAU-TOMATO-FRUITBORER-01",
+    "source_url": "https://agritech.tnau.ac.in/crop_protection/tomato/tomato_1.html",
+    "retrieved_date": "2026-11-03",
+    "fetch_method": "HTTP GET with a standard browser User-Agent header",
+    "document_sha256": "93e6fcd34c5e29de0e0f279af36b4a51716522f41924b15eaeaca63bd940f7b0",
+    "document_bytes": 14636,
+    "verbatim_excerpt": "Release Trichogramma pretiosum @ 1 lakh/ha at an interval of 7 days starting from flower initiation stage. Spray HaNPV 1.5 x 1012 POBs/ha. For Helicoverpa armigera: HaNPV 1.5 x 10 12 POBs/ha i.e. NPV of H. armigera 0.43% AS @ 3.0 ml/lit or 2 % AS @ 1.0 ml per lit ... Insecticide Dose Indoxacarb 14.5 SC 8 ml/ 10 lit Flubendiamide 39.35 SC 2 ml/10 lit Flubendiamide 20 WG 2 g/10 lit Novaluron 10 % EC 7.5 ml/10 lit Phosalone 35 % EC 13 ml/10 lit Quinalphos 25 % EC 1.0 ml/ lit Chlorantraniliprole 18.5 SC 3.0 ml/ 10 lit Cyantraniliprole 10.26 OD 18 ml/ 10 lit Updated on Jun, 2023",
+    "verdict": "MATCH",
+    "notes": "The source's dosage table has 8 chemical options; the KB record keeps 4 (Indoxacarb, Chlorantraniliprole, Cyantraniliprole, Flubendiamide). This record's description ('Insecticide option from the source's dosage table') never claimed completeness, so no F7 wording correction was needed here. Trichogramma, HaNPV, and all 4 kept chemical doses verbatim match. The explicit 'Updated on Jun, 2023' date is confirmed present. No PHI/REI/PPE published."
+  },
+  {
+    "approved_use_id": "AU-WHEAT-APHID-01",
+    "source_id": "SRC-NIPHM-DPPQS-WHEAT-01",
+    "source_url": "https://niphm.gov.in/IPMPackages/Wheat.pdf",
+    "retrieved_date": "2026-11-03",
+    "fetch_method": "HTTP GET with a standard browser User-Agent header (a plain GET/HEAD without a browser User-Agent returns HTTP 403 from this host; this is noted as a provenance-access risk, see audit report)",
+    "document_sha256": "3d030296a548f2ba13294280bea643e183b67f12af7f2625be392091e6d863cc",
+    "document_bytes": 7024394,
+    "verbatim_excerpt": "Aphids Cultural control: Regular field monitoring for pest & defender population, barrier crops like mustard crop around the field. Plant tall border crops like maize, sorghum or millet to reduce pest population. ... Chemical control: Quinalphos 25% EC @ 400 ml in 200-400 l of water per acre or Thiamethoxam 25% WG @ 20 g in 200 l of water per acre.",
+    "verdict": "MATCH",
+    "notes": "This source (a 7.0 MB, 83-page PDF) was NOT re-checked in the original Phase 3 report (3rd of the 3 outstanding sources closed in Phase 3.1); only the wheat Termite record had been spot-checked previously under the same source_id. Both chemical options and both doses for Aphids are verbatim matches; this is exactly the 2 options the source lists (no subset, record is complete for this pest). No PHI/REI/PPE published for this pest/product combination in the fetched pages."
+  },
+  {
+    "approved_use_id": "AU-WHEAT-TERMITE-01",
+    "source_id": "SRC-NIPHM-DPPQS-WHEAT-01",
+    "source_url": "https://niphm.gov.in/IPMPackages/Wheat.pdf",
+    "retrieved_date": "2026-11-03",
+    "fetch_method": "HTTP GET with a standard browser User-Agent header (a plain GET/HEAD without a browser User-Agent returns HTTP 403 from this host; this is noted as a provenance-access risk, see audit report)",
+    "document_sha256": "3d030296a548f2ba13294280bea643e183b67f12af7f2625be392091e6d863cc",
+    "document_bytes": 7024394,
+    "verbatim_excerpt": "Deep ploughing of fields during summer to control nematodes population, to expose pupae and propagules of soil borne pathogens. ... Dismantle termitaria (termite mounds) around field and kill the termite queen. ... Apply neem cake@ 80 Kg/acre. ... Thiamethoxam 30% FS @ 1.32 Kg per 40 Kg seeds or Chlorpyrifos 20% EC @ 3-4 ml/Kg seed and 0.8-1.2 l/acre as soil application.",
+    "verdict": "MATCH",
+    "notes": "Deep ploughing, termitaria dismantling, neem cake dose (80 kg/acre), and both chemical seed-treatment options/doses (Thiamethoxam 30% FS, Chlorpyrifos 20% EC) are all verbatim matches. The signed foreword date (6.3.2014) cited in sources.json's publication_date_note could not be located in the extracted text in this pass (the extractor may have missed a scanned/image foreword page); this is flagged as a minor unresolved item, not a contradiction, since no alternative date was found either."
+  }
+]

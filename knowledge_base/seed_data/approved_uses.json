@@ -1,0 +1,456 @@
+[
+  {
+    "approved_use_id": "AU-COTTON-AMERICAN-BOLLWORM-01",
+    "crop_id": "cotton",
+    "target_pest_common_name": "American bollworm / Fruit borer",
+    "target_pest_scientific_name": "Helicoverpa armigera",
+    "economic_threshold_level": "10% infested fruiting parts or one egg or one larva per plant (as stated on source page).",
+    "interventions": [
+      {
+        "control_type": "biological",
+        "description": "Inundative release of egg parasitoid Trichogramma chilonis at 15-day intervals, 3 times from 45 days after sowing.",
+        "active_ingredient_and_formulation": null,
+        "dosage": "2.5 cc/acre",
+        "dosage_unit_note": null
+      },
+      {
+        "control_type": "biological",
+        "description": "Application of Nuclear Polyhedrosis Virus (NPV) in evening hours at the 7th and 12th week after sowing.",
+        "active_ingredient_and_formulation": "Nuclear Polyhedrosis Virus (NPV)",
+        "dosage": "1.2 x 10^12 POB/acre",
+        "dosage_unit_note": null
+      },
+      {
+        "control_type": "chemical",
+        "description": "At early square-formation stage, apply one of the listed insecticides. The source lists 12 interchangeable chemical options for this stage; this record keeps only 2 of them (Azadirachtin, Chlorantraniliprole) as a representative subset, not the complete list (Phase 3.1 correction: Phase 3 wording incorrectly implied this was the full source grouping).",
+        "active_ingredient_and_formulation": "Azadirachtin 0.03% EC",
+        "dosage": "1000 ml/acre",
+        "dosage_unit_note": null
+      },
+      {
+        "control_type": "chemical",
+        "description": "At early square-formation stage, alternative option to Azadirachtin 0.03% EC above.",
+        "active_ingredient_and_formulation": "Chlorantraniliprole 18.5% SC",
+        "dosage": "60 ml/acre",
+        "dosage_unit_note": null
+      },
+      {
+        "control_type": "chemical",
+        "description": "During boll formation and maturation stage, apply one of the listed insecticides.",
+        "active_ingredient_and_formulation": "Chlorantraniliprole 18.5% SC",
+        "dosage": "60 ml/acre",
+        "dosage_unit_note": null
+      },
+      {
+        "control_type": "chemical",
+        "description": "During boll formation and maturation stage, alternative option.",
+        "active_ingredient_and_formulation": "Spinosad 45.0% SC",
+        "dosage": "66-88 ml/acre",
+        "dosage_unit_note": null
+      }
+    ],
+    "safety_restrictions": {
+      "phi": {"status": "NOT_PUBLISHED_IN_SOURCE", "value": null, "note": "The TNAU cotton American bollworm page lists insecticide options and doses but does not state a pre-harvest interval (PHI) for any of them."},
+      "rei": {"status": "NOT_PUBLISHED_IN_SOURCE", "value": null, "note": "The source page does not state a re-entry interval (REI)."},
+      "ppe": {"status": "NOT_PUBLISHED_IN_SOURCE", "value": null, "note": "The source page does not specify required personal protective equipment (PPE) for these applications."}
+    },
+    "source_id": "SRC-TNAU-COTTON-BOLLWORM-01",
+    "verification_status": "VERIFIED_SOURCE_RECOMMENDATION",
+    "verification_note": "Interventions and dosages are a direct transcription from the cited TNAU Agritech Portal page, fetched and quoted on 2026-11-02. This has NOT been independently cross-checked against the live CIB&RC pesticide product-registration database; it represents a university extension-service recommendation, not a confirmed current product registration. PHI/REI/PPE are explicitly unpublished on this source page (see safety_restrictions) and must not be inferred or assumed by any downstream module."
+  },
+  {
+    "approved_use_id": "AU-COTTON-PINK-BOLLWORM-01",
+    "crop_id": "cotton",
+    "target_pest_common_name": "Pink bollworm",
+    "target_pest_scientific_name": "Pectinophora gossypiella",
+    "economic_threshold_level": "10% infested fruiting parts or 8 moths/trap (as stated on source page).",
+    "interventions": [
+      {
+        "control_type": "mechanical",
+        "description": "Use pheromone traps to monitor adult moth activity.",
+        "active_ingredient_and_formulation": null,
+        "dosage": "5 traps/acre",
+        "dosage_unit_note": null
+      },
+      {
+        "control_type": "chemical",
+        "description": "Spray one of the listed insecticides. The source lists exactly these 3 chemical options for pink bollworm as interchangeable; this record includes all 3 (not a subset).",
+        "active_ingredient_and_formulation": "Emamectin benzoate 5% SG",
+        "dosage": "76-88 g/acre",
+        "dosage_unit_note": null
+      },
+      {
+        "control_type": "chemical",
+        "description": "Alternative option to Emamectin benzoate 5% SG above.",
+        "active_ingredient_and_formulation": "Diflubenzuron 25% WP",
+        "dosage": "120-140 g/acre",
+        "dosage_unit_note": null
+      },
+      {
+        "control_type": "chemical",
+        "description": "Alternative option to Emamectin benzoate 5% SG above.",
+        "active_ingredient_and_formulation": "Chlorantraniliprole 18.5% SC",
+        "dosage": "60 ml/acre",
+        "dosage_unit_note": null
+      }
+    ],
+    "safety_restrictions": {
+      "phi": {"status": "NOT_PUBLISHED_IN_SOURCE", "value": null, "note": "The TNAU cotton pink bollworm page does not state a pre-harvest interval (PHI) for any listed product."},
+      "rei": {"status": "NOT_PUBLISHED_IN_SOURCE", "value": null, "note": "The source page does not state a re-entry interval (REI)."},
+      "ppe": {"status": "NOT_PUBLISHED_IN_SOURCE", "value": null, "note": "The source page does not specify required personal protective equipment (PPE)."}
+    },
+    "source_id": "SRC-TNAU-COTTON-PINKBW-01",
+    "verification_status": "VERIFIED_SOURCE_RECOMMENDATION",
+    "verification_note": "Interventions and dosages are a direct transcription from the cited TNAU Agritech Portal page, fetched and quoted on 2026-11-02. This has NOT been independently cross-checked against the live CIB&RC pesticide product-registration database; it represents a university extension-service recommendation, not a confirmed current product registration. PHI/REI/PPE are explicitly unpublished on this source page and must not be inferred."
+  },
+  {
+    "approved_use_id": "AU-COTTON-SPOTTED-SPINY-BOLLWORM-01",
+    "crop_id": "cotton",
+    "target_pest_common_name": "Spotted bollworm / Spiny bollworm",
+    "target_pest_scientific_name": "Earias vittella / Earias insulana",
+    "economic_threshold_level": "10% infested shoots/squares/bolls (as stated on source page).",
+    "interventions": [
+      {
+        "control_type": "biological",
+        "description": "Application of Bacillus thuringiensis var. kurstaki.",
+        "active_ingredient_and_formulation": "Bacillus thuringiensis var. kurstaki 5% WP",
+        "dosage": "300-400 g/acre",
+        "dosage_unit_note": null
+      },
+      {
+        "control_type": "chemical",
+        "description": "Spray one of the listed insecticides. The source lists 6 interchangeable chemical options; this record keeps only 3 of them (Flubendiamide, Chlorantraniliprole, Indoxacarb) as a representative subset, not the complete list (Phase 3.1 correction).",
+        "active_ingredient_and_formulation": "Flubendiamide 39.35% SC",
+        "dosage": "40-50 ml/acre",
+        "dosage_unit_note": null
+      },
+      {
+        "control_type": "chemical",
+        "description": "Alternative option to Flubendiamide 39.35% SC above.",
+        "active_ingredient_and_formulation": "Chlorantraniliprole 18.5% SC",
+        "dosage": "60 ml/acre",
+        "dosage_unit_note": null
+      },
+      {
+        "control_type": "chemical",
+        "description": "Alternative option to Flubendiamide 39.35% SC above.",
+        "active_ingredient_and_formulation": "Indoxacarb 14.5% SC",
+        "dosage": "200 ml/acre",
+        "dosage_unit_note": null
+      }
+    ],
+    "safety_restrictions": {
+      "phi": {"status": "NOT_PUBLISHED_IN_SOURCE", "value": null, "note": "The TNAU cotton spotted/spiny bollworm page does not state a pre-harvest interval (PHI)."},
+      "rei": {"status": "NOT_PUBLISHED_IN_SOURCE", "value": null, "note": "The source page does not state a re-entry interval (REI)."},
+      "ppe": {"status": "NOT_PUBLISHED_IN_SOURCE", "value": null, "note": "The source page does not specify required personal protective equipment (PPE)."}
+    },
+    "source_id": "SRC-TNAU-COTTON-SPOTTEDBW-01",
+    "verification_status": "VERIFIED_SOURCE_RECOMMENDATION",
+    "verification_note": "Interventions and dosages are a direct transcription from the cited TNAU Agritech Portal page, fetched and quoted on 2026-11-02. This has NOT been independently cross-checked against the live CIB&RC pesticide product-registration database. PHI/REI/PPE are explicitly unpublished on this source page and must not be inferred."
+  },
+  {
+    "approved_use_id": "AU-RICE-YELLOW-STEM-BORER-01",
+    "crop_id": "rice",
+    "target_pest_common_name": "Yellow Stem Borer",
+    "target_pest_scientific_name": "Scirpophaga incertulas",
+    "economic_threshold_level": "10% dead heart, 2% white ear (as stated on source page).",
+    "interventions": [
+      {
+        "control_type": "biological",
+        "description": "Release egg parasitoid, 3 times at weekly interval.",
+        "active_ingredient_and_formulation": "Trichogramma japonicum",
+        "dosage": "2 cc/acre",
+        "dosage_unit_note": null
+      },
+      {
+        "control_type": "biological",
+        "description": "Spray neem seed kernel extract or azadirachtin.",
+        "active_ingredient_and_formulation": "Neem seed kernel extract 5% or Azadirachtin 0.03%",
+        "dosage": "400 ml/ac",
+        "dosage_unit_note": null
+      },
+      {
+        "control_type": "chemical",
+        "description": "Spray one of the listed insecticides. The source lists 14 interchangeable chemical options for yellow stem borer; this record keeps only 3 of them (Chlorantraniliprole, Fipronil, Cartap Hydrochloride) as a representative subset, not the complete list (Phase 3.1 correction).",
+        "active_ingredient_and_formulation": "Chlorantraniliprole 18.5% SC",
+        "dosage": "60 ml/ac",
+        "dosage_unit_note": null
+      },
+      {
+        "control_type": "chemical",
+        "description": "Alternative option to Chlorantraniliprole 18.5% SC above.",
+        "active_ingredient_and_formulation": "Fipronil 5% SC",
+        "dosage": "400-600 g/ac",
+        "dosage_unit_note": "Source lists this SC (suspension concentrate, normally a liquid) formulation with a gram dose; recorded exactly as published without correction."
+      },
+      {
+        "control_type": "chemical",
+        "description": "Alternative option to Chlorantraniliprole 18.5% SC above.",
+        "active_ingredient_and_formulation": "Cartap Hydrochloride 50% SP",
+        "dosage": "400 g/ac",
+        "dosage_unit_note": null
+      }
+    ],
+    "safety_restrictions": {
+      "phi": {"status": "NOT_PUBLISHED_IN_SOURCE", "value": null, "note": "The TNAU rice yellow stem borer page does not state a pre-harvest interval (PHI)."},
+      "rei": {"status": "NOT_PUBLISHED_IN_SOURCE", "value": null, "note": "The source page does not state a re-entry interval (REI)."},
+      "ppe": {"status": "NOT_PUBLISHED_IN_SOURCE", "value": null, "note": "The source page does not specify required personal protective equipment (PPE)."}
+    },
+    "source_id": "SRC-TNAU-RICE-STEMBORER-01",
+    "verification_status": "VERIFIED_SOURCE_RECOMMENDATION",
+    "verification_note": "Interventions and dosages are a direct transcription from the cited TNAU Agritech Portal page, fetched and quoted on 2026-11-02. This has NOT been independently cross-checked against the live CIB&RC pesticide product-registration database. PHI/REI/PPE are explicitly unpublished on this source page and must not be inferred."
+  },
+  {
+    "approved_use_id": "AU-RICE-LEAF-FOLDER-01",
+    "crop_id": "rice",
+    "target_pest_common_name": "Rice Leaf Folder",
+    "target_pest_scientific_name": null,
+    "economic_threshold_level": "10% leaf damage at vegetative phase; 5% flag leaf damage at flowering (as stated on source page).",
+    "interventions": [
+      {
+        "control_type": "biological",
+        "description": "Release at 30, 37 and 44 days after planting, three times.",
+        "active_ingredient_and_formulation": "Trichogramma chilonis",
+        "dosage": "2 cc (40,000/ac)",
+        "dosage_unit_note": null
+      },
+      {
+        "control_type": "biological",
+        "description": "Spray NSKE or azadirachtin.",
+        "active_ingredient_and_formulation": "NSKE 5% or Azadirachtin 0.03%",
+        "dosage": "400 ml/ac",
+        "dosage_unit_note": null
+      },
+      {
+        "control_type": "chemical",
+        "description": "Spray one of the listed insecticides. The source lists 9 interchangeable chemical options for rice leaf folder; this record keeps only 3 of them (Chlorantraniliprole, Fipronil, Chlorpyriphos) as a representative subset, not the complete list (Phase 3.1 correction).",
+        "active_ingredient_and_formulation": "Chlorantraniliprole 18.5% SC",
+        "dosage": "60 g/ac",
+        "dosage_unit_note": "Source states this SC (suspension concentrate, normally a liquid) formulation with a gram dose, differing from the 'ml/ac' unit used for the same product on the Yellow Stem Borer page from the same portal; recorded exactly as published without correction."
+      },
+      {
+        "control_type": "chemical",
+        "description": "Alternative option to Chlorantraniliprole 18.5% SC above.",
+        "active_ingredient_and_formulation": "Fipronil 80% WG",
+        "dosage": "20-25 g/ac",
+        "dosage_unit_note": null
+      },
+      {
+        "control_type": "chemical",
+        "description": "Alternative option to Chlorantraniliprole 18.5% SC above.",
+        "active_ingredient_and_formulation": "Chlorpyriphos 20% EC",
+        "dosage": "500 ml/ac",
+        "dosage_unit_note": null
+      }
+    ],
+    "safety_restrictions": {
+      "phi": {"status": "NOT_PUBLISHED_IN_SOURCE", "value": null, "note": "The TNAU rice leaf folder page does not state a pre-harvest interval (PHI)."},
+      "rei": {"status": "NOT_PUBLISHED_IN_SOURCE", "value": null, "note": "The source page does not state a re-entry interval (REI)."},
+      "ppe": {"status": "NOT_PUBLISHED_IN_SOURCE", "value": null, "note": "The source page does not specify required personal protective equipment (PPE)."}
+    },
+    "source_id": "SRC-TNAU-RICE-LEAFFOLDER-01",
+    "verification_status": "VERIFIED_SOURCE_RECOMMENDATION",
+    "verification_note": "Interventions and dosages are a direct transcription from the cited TNAU Agritech Portal page, fetched and quoted on 2026-11-02. This has NOT been independently cross-checked against the live CIB&RC pesticide product-registration database. A dosage-unit discrepancy observed in the source itself is flagged in dosage_unit_note rather than silently corrected. PHI/REI/PPE are explicitly unpublished and must not be inferred."
+  },
+  {
+    "approved_use_id": "AU-MAIZE-FALL-ARMYWORM-01",
+    "crop_id": "maize",
+    "target_pest_common_name": "Fall armyworm",
+    "target_pest_scientific_name": "Spodoptera frugiperda",
+    "economic_threshold_level": null,
+    "interventions": [
+      {
+        "control_type": "cultural",
+        "description": "Seed treatment before sowing.",
+        "active_ingredient_and_formulation": "Cyantraniliprole 19.8% + Thiamethoxam 19.8% FS",
+        "dosage": "4 ml/kg seed",
+        "dosage_unit_note": null
+      },
+      {
+        "control_type": "chemical",
+        "description": "Spray at early stage (15-20 days after emergence). Source presents this as one of two early-stage options.",
+        "active_ingredient_and_formulation": "Azadirachtin 1500 ppm",
+        "dosage": "2.5 lit/ha",
+        "dosage_unit_note": null
+      },
+      {
+        "control_type": "chemical",
+        "description": "Spray at early stage (15-20 days after emergence). Alternative option to Azadirachtin above.",
+        "active_ingredient_and_formulation": "Chlorantraniliprole 18.5 SC",
+        "dosage": "200 ml/ha",
+        "dosage_unit_note": null
+      },
+      {
+        "control_type": "biological",
+        "description": "Spray at late whorl stage (35-40 days after emergence). One of several late-whorl-stage options listed on the source page.",
+        "active_ingredient_and_formulation": "Metarhizium anisopliae (TNAU-MA-GDU isolate)",
+        "dosage": "2.5 kg/ha",
+        "dosage_unit_note": null
+      },
+      {
+        "control_type": "chemical",
+        "description": "Spray at late whorl stage (35-40 days after emergence). Alternative option.",
+        "active_ingredient_and_formulation": "Emamectin benzoate 5 SG",
+        "dosage": "200 g/ha",
+        "dosage_unit_note": null
+      }
+    ],
+    "safety_restrictions": {
+      "phi": {"status": "NOT_PUBLISHED_IN_SOURCE", "value": null, "note": "The TNAU fall armyworm page does not state a pre-harvest interval (PHI)."},
+      "rei": {"status": "NOT_PUBLISHED_IN_SOURCE", "value": null, "note": "The source page does not state a re-entry interval (REI)."},
+      "ppe": {"status": "NOT_PUBLISHED_IN_SOURCE", "value": null, "note": "The source page does not specify required personal protective equipment (PPE)."}
+    },
+    "source_id": "SRC-TNAU-MAIZE-FAW-01",
+    "verification_status": "VERIFIED_SOURCE_RECOMMENDATION",
+    "verification_note": "Interventions and dosages are a direct transcription from the cited TNAU Agritech Portal page (explicitly dated 'Updated on May 2023'), fetched and quoted on 2026-11-02. This has NOT been independently cross-checked against the live CIB&RC pesticide product-registration database. PHI/REI/PPE are explicitly unpublished on this source page and must not be inferred. The source states 'repetition to be avoided' for cob-formation-stage reuse of late-whorl insecticides — preserved here as a usage caveat."
+  },
+  {
+    "approved_use_id": "AU-TOMATO-FRUIT-BORER-01",
+    "crop_id": "tomato",
+    "target_pest_common_name": "Fruit Borer",
+    "target_pest_scientific_name": "Helicoverpa armigera",
+    "economic_threshold_level": null,
+    "interventions": [
+      {
+        "control_type": "biological",
+        "description": "Release at an interval of 7 days starting from flower initiation stage.",
+        "active_ingredient_and_formulation": "Trichogramma pretiosum",
+        "dosage": "1 lakh/ha",
+        "dosage_unit_note": null
+      },
+      {
+        "control_type": "biological",
+        "description": "Spray HaNPV. Source gives two alternative concentration/dose expressions for the same product.",
+        "active_ingredient_and_formulation": "HaNPV (NPV of H. armigera) 0.43% AS",
+        "dosage": "3.0 ml/lit",
+        "dosage_unit_note": null
+      },
+      {
+        "control_type": "chemical",
+        "description": "Insecticide option from the source's dosage table (dose given per 10 litres of water as published).",
+        "active_ingredient_and_formulation": "Indoxacarb 14.5 SC",
+        "dosage": "8 ml/10 lit",
+        "dosage_unit_note": null
+      },
+      {
+        "control_type": "chemical",
+        "description": "Insecticide option from the source's dosage table.",
+        "active_ingredient_and_formulation": "Chlorantraniliprole 18.5 SC",
+        "dosage": "3.0 ml/10 lit",
+        "dosage_unit_note": null
+      },
+      {
+        "control_type": "chemical",
+        "description": "Insecticide option from the source's dosage table.",
+        "active_ingredient_and_formulation": "Cyantraniliprole 10.26 OD",
+        "dosage": "18 ml/10 lit",
+        "dosage_unit_note": null
+      },
+      {
+        "control_type": "chemical",
+        "description": "Insecticide option from the source's dosage table.",
+        "active_ingredient_and_formulation": "Flubendiamide 39.35 SC",
+        "dosage": "2 ml/10 lit",
+        "dosage_unit_note": null
+      }
+    ],
+    "safety_restrictions": {
+      "phi": {"status": "NOT_PUBLISHED_IN_SOURCE", "value": null, "note": "The TNAU tomato fruit borer page lists an insecticide dosage table but does not state a pre-harvest interval (PHI) for any listed product."},
+      "rei": {"status": "NOT_PUBLISHED_IN_SOURCE", "value": null, "note": "The source page does not state a re-entry interval (REI)."},
+      "ppe": {"status": "NOT_PUBLISHED_IN_SOURCE", "value": null, "note": "The source page does not specify required personal protective equipment (PPE)."}
+    },
+    "source_id": "SRC-TNAU-TOMATO-FRUITBORER-01",
+    "verification_status": "VERIFIED_SOURCE_RECOMMENDATION",
+    "verification_note": "Interventions and dosages are a direct transcription from the cited TNAU Agritech Portal page (explicitly dated 'Updated on Jun, 2023'), fetched and quoted on 2026-11-02. This has NOT been independently cross-checked against the live CIB&RC pesticide product-registration database. PHI/REI/PPE are explicitly unpublished on this source page and must not be inferred."
+  },
+  {
+    "approved_use_id": "AU-WHEAT-APHID-01",
+    "crop_id": "wheat",
+    "target_pest_common_name": "Aphids (Wheat aphid)",
+    "target_pest_scientific_name": "Sitobion avenae / Sitobion miscanthi",
+    "economic_threshold_level": null,
+    "interventions": [
+      {
+        "control_type": "cultural",
+        "description": "Regular field monitoring for pest and defender population; barrier crop of mustard around the field; tall border crops (maize, sorghum, or millet) to reduce pest population.",
+        "active_ingredient_and_formulation": null,
+        "dosage": null,
+        "dosage_unit_note": null
+      },
+      {
+        "control_type": "chemical",
+        "description": "Chemical control option listed on the source page (one of two interchangeable options).",
+        "active_ingredient_and_formulation": "Quinalphos 25% EC",
+        "dosage": "400 ml in 200-400 l of water per acre",
+        "dosage_unit_note": null
+      },
+      {
+        "control_type": "chemical",
+        "description": "Alternative chemical control option to Quinalphos 25% EC above.",
+        "active_ingredient_and_formulation": "Thiamethoxam 25% WG",
+        "dosage": "20 g in 200 l of water per acre",
+        "dosage_unit_note": null
+      }
+    ],
+    "safety_restrictions": {
+      "phi": {"status": "NOT_PUBLISHED_IN_SOURCE", "value": null, "note": "The NIPHM-DPPQS wheat IPM package's Aphids section (vegetative-stage table) does not state a pre-harvest interval (PHI) for the listed products; PHI is not addressed per-pest/per-product in the fetched pages."},
+      "rei": {"status": "NOT_PUBLISHED_IN_SOURCE", "value": null, "note": "The Aphids section does not state a re-entry interval (REI) for these products."},
+      "ppe": {"status": "NOT_PUBLISHED_IN_SOURCE", "value": null, "note": "The Aphids section does not specify PPE for these products. The document does contain general chapters on 'Safety parameters in pesticide usage' and 'Basic precautions in pesticide usage' (Section XIV-XV of the table of contents), but those were not fetched/transcribed into this record and must not be assumed to apply per-product without reading them directly."}
+    },
+    "source_id": "SRC-NIPHM-DPPQS-WHEAT-01",
+    "verification_status": "VERIFIED_SOURCE_RECOMMENDATION",
+    "verification_note": "Interventions and dosages are a direct transcription from the 'Vegetative' stage table, 'Aphids' row, of the cited NIPHM/DPPQS AESA-based IPM Wheat package PDF, fetched and quoted on 2026-11-02. The document itself notes dosages are 'based on high volume sprayer'. This has NOT been independently cross-checked against the live CIB&RC pesticide product-registration database; DPPQS is CIB&RC's parent directorate but this specific document is IPM extension guidance, not a product-label lookup. PHI/REI/PPE are explicitly unpublished for this pest/product combination in the fetched pages and must not be inferred."
+  },
+  {
+    "approved_use_id": "AU-WHEAT-TERMITE-01",
+    "crop_id": "wheat",
+    "target_pest_common_name": "Termite",
+    "target_pest_scientific_name": "Odontotermis obesus / Microtermes obesi",
+    "economic_threshold_level": null,
+    "interventions": [
+      {
+        "control_type": "cultural",
+        "description": "Deep ploughing of fields during summer; three summer ploughings at 10-day intervals reduces juvenile population. Apply only well-rotten farm yard manure. Avoid late sowing. Destroy crop residues that form infestation sources.",
+        "active_ingredient_and_formulation": null,
+        "dosage": null,
+        "dosage_unit_note": null
+      },
+      {
+        "control_type": "mechanical",
+        "description": "Dismantle termitaria (termite mounds) around the field and kill the termite queen.",
+        "active_ingredient_and_formulation": null,
+        "dosage": null,
+        "dosage_unit_note": null
+      },
+      {
+        "control_type": "biological",
+        "description": "Apply neem cake.",
+        "active_ingredient_and_formulation": "Neem cake",
+        "dosage": "80 kg/acre",
+        "dosage_unit_note": null
+      },
+      {
+        "control_type": "chemical",
+        "description": "Pre-sowing seed treatment option (one of two listed).",
+        "active_ingredient_and_formulation": "Thiamethoxam 30% FS",
+        "dosage": "1.32 kg per 40 kg seeds",
+        "dosage_unit_note": null
+      },
+      {
+        "control_type": "chemical",
+        "description": "Pre-sowing option: alternative to Thiamethoxam 30% FS above, as seed treatment and soil application.",
+        "active_ingredient_and_formulation": "Chlorpyrifos 20% EC",
+        "dosage": "3-4 ml/kg seed (seed treatment); 0.8-1.2 l/acre (soil application)",
+        "dosage_unit_note": null
+      }
+    ],
+    "safety_restrictions": {
+      "phi": {"status": "NOT_PUBLISHED_IN_SOURCE", "value": null, "note": "The NIPHM-DPPQS wheat IPM package's Termites section does not state a pre-harvest interval (PHI) for the listed products."},
+      "rei": {"status": "NOT_PUBLISHED_IN_SOURCE", "value": null, "note": "The Termites section does not state a re-entry interval (REI)."},
+      "ppe": {"status": "NOT_PUBLISHED_IN_SOURCE", "value": null, "note": "The Termites section does not specify PPE for these products in the fetched pages."}
+    },
+    "source_id": "SRC-NIPHM-DPPQS-WHEAT-01",
+    "verification_status": "VERIFIED_SOURCE_RECOMMENDATION",
+    "verification_note": "Interventions and dosages are a direct transcription from the 'Pre-sowing' and 'Termites' (vegetative-stage) rows of the cited NIPHM/DPPQS AESA-based IPM Wheat package PDF, fetched and quoted on 2026-11-02. This has NOT been independently cross-checked against the live CIB&RC pesticide product-registration database. PHI/REI/PPE are explicitly unpublished for this pest/product combination in the fetched pages and must not be inferred."
+  }
+]

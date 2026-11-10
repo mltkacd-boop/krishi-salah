@@ -1,0 +1,227 @@
+{
+  "model_version": "clf-1.0.0",
+  "trained_at": "2026-11-02T20:37:45+00:00",
+  "evaluation_split": "test",
+  "test_rows": 32,
+  "seed": 42,
+  "thresholds": {
+    "min_confidence": {
+      "crop": 0.4,
+      "task": 0.4,
+      "safety_topic": 0.4
+    },
+    "min_margin": {
+      "crop": 0.15,
+      "task": 0.15,
+      "safety_topic": 0.15
+    }
+  },
+  "targets": {
+    "crop": {
+      "accuracy": 0.8438,
+      "macro_precision": 0.8782,
+      "macro_recall": 0.8401,
+      "macro_f1": 0.8353,
+      "weighted_precision": 0.8689,
+      "weighted_recall": 0.8438,
+      "weighted_f1": 0.8353,
+      "n": 32,
+      "per_class": {
+        "rice": {
+          "precision": 0.8,
+          "recall": 1.0,
+          "f1": 0.8889,
+          "support": 4
+        },
+        "no_crop": {
+          "precision": 0.8333,
+          "recall": 0.7143,
+          "f1": 0.7692,
+          "support": 7
+        },
+        "tomato": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 5
+        },
+        "maize": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6667,
+          "support": 4
+        },
+        "unsupported_crop": {
+          "precision": 1.0,
+          "recall": 0.6667,
+          "f1": 0.8,
+          "support": 3
+        },
+        "cotton": {
+          "precision": 0.7143,
+          "recall": 1.0,
+          "f1": 0.8333,
+          "support": 5
+        },
+        "wheat": {
+          "precision": 0.8,
+          "recall": 1.0,
+          "f1": 0.8889,
+          "support": 4
+        }
+      }
+    },
+    "task": {
+      "accuracy": 0.7188,
+      "macro_precision": 0.4577,
+      "macro_recall": 0.5444,
+      "macro_f1": 0.4941,
+      "weighted_precision": 0.625,
+      "weighted_recall": 0.7188,
+      "weighted_f1": 0.665,
+      "n": 32,
+      "per_class": {
+        "out_of_scope": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 2
+        },
+        "disease_management": {
+          "precision": 0.5,
+          "recall": 0.6667,
+          "f1": 0.5714,
+          "support": 3
+        },
+        "pest_management": {
+          "precision": 0.5556,
+          "recall": 0.8333,
+          "f1": 0.6667,
+          "support": 6
+        },
+        "general_guidance": {
+          "precision": 0.8333,
+          "recall": 0.9091,
+          "f1": 0.8696,
+          "support": 11
+        },
+        "product_information": {
+          "precision": 0.8571,
+          "recall": 0.8571,
+          "f1": 0.8571,
+          "support": 7
+        },
+        "pest_identification": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 3
+        }
+      }
+    },
+    "safety_topic": {
+      "accuracy": 0.8438,
+      "macro_precision": 0.78,
+      "macro_recall": 0.7083,
+      "macro_f1": 0.72,
+      "weighted_precision": 0.8056,
+      "weighted_recall": 0.8438,
+      "weighted_f1": 0.8089,
+      "n": 32,
+      "per_class": {
+        "phi": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 3
+        },
+        "ppe": {
+          "precision": 0.6667,
+          "recall": 0.6667,
+          "f1": 0.6667,
+          "support": 3
+        },
+        "general_safety": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 2
+        },
+        "toxicity": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6667,
+          "support": 2
+        },
+        "dosage": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 3
+        },
+        "rei": {
+          "precision": 0.75,
+          "recall": 1.0,
+          "f1": 0.8571,
+          "support": 3
+        },
+        "regulatory_approval": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6667,
+          "support": 2
+        },
+        "no_safety_topic": {
+          "precision": 0.8235,
+          "recall": 1.0,
+          "f1": 0.9032,
+          "support": 14
+        }
+      }
+    }
+  },
+  "all_three_correct": {
+    "correct": 16,
+    "total": 32,
+    "accuracy": 0.5
+  },
+  "policy_behaviour": {
+    "requires_clarification": 9,
+    "answered_without_clarification": 23,
+    "confident_crop_correct": 17,
+    "confident_crop_total": 17,
+    "unsupported_rows": 3,
+    "unsupported_flagged": 1,
+    "status_counts": {
+      "crop": {
+        "ambiguous": 10,
+        "confident": 17,
+        "not_specified": 4,
+        "unsupported": 1
+      },
+      "task": {
+        "confident": 29,
+        "ambiguous": 3
+      },
+      "safety_topic": {
+        "confident": 31,
+        "ambiguous": 1
+      }
+    },
+    "unnecessary_clarification_on_clear_rows": 9,
+    "answered_rows_all_three_correct": 14,
+    "answered_per_target_correct": {
+      "crop": 21,
+      "task": 18,
+      "safety_topic": 20
+    },
+    "answered_all_three_accuracy": 0.6087,
+    "answered_per_target_accuracy": {
+      "crop": 0.913,
+      "task": 0.7826,
+      "safety_topic": 0.8696
+    },
+    "clear_rows": 32,
+    "abstention_rate_on_clear_rows": 0.2812
+  }
+}

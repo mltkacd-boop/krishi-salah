@@ -1,0 +1,14 @@
+# Optional extras. Not required to run, test or deploy the application.
+#
+#   pip install -r requirements-optional.txt
+#
+# sentence-transformers pulls PyTorch (roughly 2 GB installed). It is only
+# imported when EMBEDDING_PROVIDER=sentence-transformer, and the pilot uses the
+# deterministic lexical embedder instead, so installing it on a hosting plan
+# would cost build time and memory for a code path the deployment never runs.
+sentence-transformers==3.1.1
+
+# Browser-based integration check (scripts/phase9_integration_check.py).
+# It drives the locally installed Microsoft Edge through the `msedge` channel,
+# so no Playwright browser download is required.
+playwright==1.64.1

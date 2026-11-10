@@ -1,0 +1,32 @@
+[
+  {
+    "crop_id": "rice",
+    "crop_name": "Rice",
+    "crop_category": "cereal",
+    "is_pilot_crop": true
+  },
+  {
+    "crop_id": "wheat",
+    "crop_name": "Wheat",
+    "crop_category": "cereal",
+    "is_pilot_crop": true
+  },
+  {
+    "crop_id": "maize",
+    "crop_name": "Maize",
+    "crop_category": "cereal",
+    "is_pilot_crop": true
+  },
+  {
+    "crop_id": "cotton",
+    "crop_name": "Cotton",
+    "crop_category": "fibre",
+    "is_pilot_crop": true
+  },
+  {
+    "crop_id": "tomato",
+    "crop_name": "Tomato",
+    "crop_category": "vegetable",
+    "is_pilot_crop": true
+  }
+]

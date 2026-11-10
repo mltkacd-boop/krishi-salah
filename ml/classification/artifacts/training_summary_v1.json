@@ -1,0 +1,59 @@
+{
+  "dataset_path": "ml\\classification\\dataset\\queries.csv",
+  "dataset_rows": 211,
+  "split_sizes": {
+    "train": 147,
+    "dev": 32,
+    "test": 32
+  },
+  "split_seed": 42,
+  "label_distribution_all": {
+    "crop": {
+      "wheat": 26,
+      "no_crop": 45,
+      "tomato": 30,
+      "cotton": 31,
+      "unsupported_crop": 22,
+      "maize": 29,
+      "rice": 28
+    },
+    "task": {
+      "pest_identification": 16,
+      "product_information": 44,
+      "out_of_scope": 15,
+      "pest_management": 35,
+      "disease_management": 23,
+      "general_guidance": 78
+    },
+    "safety_topic": {
+      "ppe": 17,
+      "toxicity": 10,
+      "regulatory_approval": 10,
+      "dosage": 23,
+      "general_safety": 12,
+      "phi": 17,
+      "no_safety_topic": 101,
+      "rei": 21
+    }
+  },
+  "thresholds": {
+    "min_confidence": {
+      "crop": 0.4,
+      "task": 0.4,
+      "safety_topic": 0.4
+    },
+    "min_margin": {
+      "crop": 0.15,
+      "task": 0.15,
+      "safety_topic": 0.15
+    }
+  },
+  "features": "TF-IDF word(1,2) + char_wb(3,5), sublinear_tf",
+  "estimator": "LogisticRegression(C=1.0, class_weight='balanced', lbfgs)",
+  "language_coverage": {
+    "en": 125,
+    "hi": 60,
+    "hi-latn": 26
+  },
+  "notes": "Fitted on the train split only. Labels are intent signals; the model holds no agricultural facts and cannot approve a recommendation."
+}

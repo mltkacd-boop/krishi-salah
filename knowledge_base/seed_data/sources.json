@@ -1,0 +1,98 @@
+[
+  {
+    "source_id": "SRC-TNAU-COTTON-BOLLWORM-01",
+    "title": "Crop Protection :: Cash Crop :: Pest of Cotton — Fruit borer (Helicoverpa armigera)",
+    "authority": "Tamil Nadu Agricultural University (TNAU) Agritech Portal",
+    "url": "https://agritech.tnau.ac.in/crop_protection/cotton/crop_prot_crop_insectpest%20_cotton_1.html",
+    "publication_date": null,
+    "publication_date_note": "Page footer shows a copyright range '2008-2024 TNAU' but does not state a specific last-updated date for this page's content.",
+    "retrieved_date": "2026-11-02",
+    "geography": "India (Tamil Nadu Agricultural University; content presented as general crop-protection guidance, not state-restricted)",
+    "reliability_tier": "state_agricultural_university",
+    "access_note": null
+  },
+  {
+    "source_id": "SRC-TNAU-COTTON-PINKBW-01",
+    "title": "Crop Protection :: Cash Crop :: Pest of Cotton — Pink bollworm (Pectinophora gossypiella)",
+    "authority": "Tamil Nadu Agricultural University (TNAU) Agritech Portal",
+    "url": "https://agritech.tnau.ac.in/crop_protection/cotton/crop_prot_crop_insectpest%20_cotton_2.html",
+    "publication_date": null,
+    "publication_date_note": "Page footer shows a copyright range '2008-2024 TNAU' but does not state a specific last-updated date for this page's content.",
+    "retrieved_date": "2026-11-02",
+    "geography": "India (Tamil Nadu Agricultural University; content presented as general crop-protection guidance, not state-restricted)",
+    "reliability_tier": "state_agricultural_university",
+    "access_note": null
+  },
+  {
+    "source_id": "SRC-TNAU-COTTON-SPOTTEDBW-01",
+    "title": "Crop Protection :: Cash Crop :: Pest of Cotton — Spotted bollworm (Earias vittella) / Spiny bollworm (Earias insulana)",
+    "authority": "Tamil Nadu Agricultural University (TNAU) Agritech Portal",
+    "url": "https://agritech.tnau.ac.in/crop_protection/cotton/crop_prot_crop_insectpest%20_cotton_3.html",
+    "publication_date": null,
+    "publication_date_note": "Page footer shows a copyright range '2008-2024 TNAU' but does not state a specific last-updated date for this page's content.",
+    "retrieved_date": "2026-11-02",
+    "geography": "India (Tamil Nadu Agricultural University; content presented as general crop-protection guidance, not state-restricted)",
+    "reliability_tier": "state_agricultural_university",
+    "access_note": null
+  },
+  {
+    "source_id": "SRC-TNAU-RICE-STEMBORER-01",
+    "title": "Crop Protection :: Pest of Paddy — Yellow Stem Borer (Scirpophaga incertulas)",
+    "authority": "Tamil Nadu Agricultural University (TNAU) Agritech Portal",
+    "url": "https://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_m1.html",
+    "publication_date": null,
+    "publication_date_note": "Page footer shows a copyright range '2008-2026 TNAU' but does not state a specific last-updated date for this page's content.",
+    "retrieved_date": "2026-11-02",
+    "geography": "India (Tamil Nadu Agricultural University; content presented as general crop-protection guidance, not state-restricted)",
+    "reliability_tier": "state_agricultural_university",
+    "access_note": null
+  },
+  {
+    "source_id": "SRC-TNAU-RICE-LEAFFOLDER-01",
+    "title": "Crop Protection :: Pest of Paddy — Rice Leaf Folder",
+    "authority": "Tamil Nadu Agricultural University (TNAU) Agritech Portal",
+    "url": "https://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_m5.html",
+    "publication_date": null,
+    "publication_date_note": "No explicit last-updated date shown on the fetched page content.",
+    "retrieved_date": "2026-11-02",
+    "geography": "India (Tamil Nadu Agricultural University; content presented as general crop-protection guidance, not state-restricted)",
+    "reliability_tier": "state_agricultural_university",
+    "access_note": null
+  },
+  {
+    "source_id": "SRC-TNAU-MAIZE-FAW-01",
+    "title": "Crop Protection :: Maize — Fall armyworm (Spodoptera frugiperda)",
+    "authority": "Tamil Nadu Agricultural University (TNAU) Agritech Portal",
+    "url": "https://agritech.tnau.ac.in/crop_protection/maize/crop_prot_maize_fall_armyworm.html",
+    "publication_date": "2023-05",
+    "publication_date_note": "Page explicitly states 'Updated on May 2023'.",
+    "retrieved_date": "2026-11-02",
+    "geography": "India (Tamil Nadu Agricultural University; content presented as general crop-protection guidance, not state-restricted)",
+    "reliability_tier": "state_agricultural_university",
+    "access_note": null
+  },
+  {
+    "source_id": "SRC-TNAU-TOMATO-FRUITBORER-01",
+    "title": "Crop Protection :: Tomato — Fruit Borer (Helicoverpa armigera)",
+    "authority": "Tamil Nadu Agricultural University (TNAU) Agritech Portal",
+    "url": "https://agritech.tnau.ac.in/crop_protection/tomato/tomato_1.html",
+    "publication_date": "2023-06",
+    "publication_date_note": "Page explicitly states 'Updated on Jun, 2023'.",
+    "retrieved_date": "2026-11-02",
+    "geography": "India (Tamil Nadu Agricultural University; content presented as general crop-protection guidance, not state-restricted)",
+    "reliability_tier": "state_agricultural_university",
+    "access_note": null
+  },
+  {
+    "source_id": "SRC-NIPHM-DPPQS-WHEAT-01",
+    "title": "AESA Based IPM Package — AESA Based IPM: Wheat",
+    "authority": "National Institute of Plant Health Management (NIPHM) and Directorate of Plant Protection, Quarantine and Storage (DPPQS), Department of Agriculture & Cooperation, Ministry of Agriculture, Government of India",
+    "url": "https://niphm.gov.in/IPMPackages/Wheat.pdf",
+    "publication_date": "2014-03-06",
+    "publication_date_note": "Foreword page is dated and signed 'Date: 6.3.2014' by the Additional Secretary, Ministry of Agriculture. No separate document-wide revision date was found elsewhere in the fetched pages; this is the only explicit date present.",
+    "retrieved_date": "2026-11-02",
+    "geography": "India (national package; wheat agronomic content covers India's major wheat-producing states per the document's own crop-overview section)",
+    "reliability_tier": "national_regulator_ipm_package",
+    "access_note": "DPPQS is the Directorate that houses the Central Insecticides Board & Registration Committee (CIB&RC), India's pesticide registration authority. This IPM package is DPPQS/NIPHM joint guidance, not a CIB&RC product-registration label lookup; see verification_note on each wheat approved_use record."
+  }
+]
